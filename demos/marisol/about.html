@@ -38,8 +38,22 @@
   </script>
 
   <link rel="stylesheet" href="assets/css/custom.css">
+  <!-- Self-contained concept banner; keep demo branding separate. -->
+  <style>
+    body { padding-top: 48px; }
+    .site-header, .menu-jump { top: 48px; }
+    .menu-section-head { scroll-margin-top: 120px; }
+    .portfolio-concept { position: fixed; inset: 0 0 auto; z-index: 10000; height: 48px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 6px 16px; background: #15140f; color: #fff; font: 12px/1.4 system-ui, sans-serif; }
+    .portfolio-concept a { flex-shrink: 0; color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+    .portfolio-concept a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+    @media (max-width: 400px) { .portfolio-concept { padding-inline: 8px; gap: 8px; font-size: 11px; } }
+  </style>
 </head>
 <body>
+  <aside class="portfolio-concept" aria-label="Concept site notice">
+    <span>Concept site for a fictional business, designed by BRAND_NAME</span>
+    <a href="/">← Back to portfolio</a>
+  </aside>
 
   <a class="skip-link" href="#main">Skip to content</a>
   <span class="header-sentinel" data-header-sentinel aria-hidden="true"></span>
@@ -112,7 +126,7 @@
             </p>
           </div>
           <figure class="about-figure">
-            <img src="assets/images/about-origin.jpg"
+            <img src="assets/images/about-origin.webp"
                  alt="A cook in a red apron lifting a foil tray of food onto the counter beside an open oven."
                  width="738" height="414" loading="lazy" decoding="async">
           </figure>
@@ -155,7 +169,7 @@
             </p>
           </div>
           <figure class="about-figure about-figure-feature">
-            <img src="assets/images/about-wood-fire.jpg"
+            <img src="assets/images/about-wood-fire.webp"
                  alt="Chicken grilling over coals on a long steel grill, with mixing bowls hanging above."
                  width="515" height="388" loading="lazy" decoding="async">
           </figure>

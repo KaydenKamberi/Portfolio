@@ -21,3 +21,71 @@
   to = "/404.html"
   status = 404
   force = true
+
+# The static site publishes from the repo root. Do not expose workspace files
+# or internal demo source notes with that configuration.
+[[redirects]]
+  from = "/attached_assets/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/.agents/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/.local/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/.git/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/.cache/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/.replit"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/replit.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/netlify.toml"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/demos/construction/content/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/demos/construction/scripts/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

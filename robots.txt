@@ -1,0 +1,17 @@
+# Replace BRAND_NAME.netlify.app with the final public hostname before launch.
+User-agent: *
+Allow: /
+Disallow: /thanks/
+Disallow: /SPEC.md
+Disallow: /AGENTS.md
+Disallow: /README.md
+Disallow: /replit.md
+Disallow: /attached_assets/
+Disallow: /.agents/
+Disallow: /.local/
+Disallow: /.git/
+Disallow: /.cache/
+Disallow: /demos/construction/content/
+Disallow: /demos/construction/scripts/
+
+Sitemap: https://BRAND_NAME.netlify.app/sitemap.xml

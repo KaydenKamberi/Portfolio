@@ -8,8 +8,20 @@
 <link rel="preload" href="./assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="./assets/fonts/public-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="./css/styles.css">
+<style>
+  body { padding-top: 48px; }
+  .topbar { top: 48px; }
+  .portfolio-concept { position: fixed; inset: 0 0 auto; z-index: 10000; height: 48px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 6px 16px; background: #15140f; color: #fff; font: 12px/1.4 system-ui, sans-serif; }
+  .portfolio-concept a { flex-shrink: 0; color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+  .portfolio-concept a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+  @media (max-width: 400px) { .portfolio-concept { padding-inline: 8px; gap: 8px; font-size: 11px; } }
+</style>
 </head>
 <body>
+<aside class="portfolio-concept" aria-label="Concept site notice">
+  <span>Concept site for a fictional business, designed by BRAND_NAME</span>
+  <a href="/">← Back to portfolio</a>
+</aside>
 <a class="skip" href="#main">Skip to content</a>
 <header class="topbar">
   <a class="brand" href="./index.html">
