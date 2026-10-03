@@ -6,8 +6,8 @@
    2. Site header        8. Process steps
    3. Section header     9. About
    4. Browser frame     10. CTA band
-   5. Screenshot         11. Form field
-      placeholder       12. Site footer
+   5. Work card shot    11. Form field
+                        12. Site footer
    6. Work card + chips 13. Hero, case study, 404 */
 
 /* ---------- 1. Buttons ----------
@@ -323,128 +323,18 @@
   aspect-ratio: 780 / 1688;
 }
 
-/* ---------- 5. Screenshot placeholder ----------
-   Stands in for assets/img/<slug>/desktop.webp until the screenshots land.
-   It is a tall faux page that scrolls inside the frame on hover. */
+/* ---------- 5. Work card screenshot ----------
+   Cards crop the 1600x1000 screenshot to 16:9 so the hover drift
+   (object-position top to bottom) has room to move. */
 
-.shot-placeholder {
-  position: absolute;
-  inset: 0 0 auto;
-  height: 170%;
-  display: grid;
-  grid-template-rows: auto 1fr auto auto;
-  gap: 6%;
-  padding: 6% 7%;
-  background:
-    radial-gradient(circle at 85% 12%, color-mix(in srgb, var(--accent) 22%, transparent) 0 18%, transparent 19%),
-    linear-gradient(180deg, var(--surface), var(--bg));
-  transition: transform 6s ease-in-out;
-}
-
-.shot-placeholder__nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.shot-placeholder__logo {
-  font-family: var(--font-display);
-  font-size: var(--step-1);
-  line-height: 1;
-  color: var(--ink);
-}
-
-.shot-placeholder__links {
-  display: flex;
-  gap: 6px;
-}
-
-.shot-placeholder__links i,
-.shot-placeholder__line {
-  display: block;
-  height: 6px;
-  border-radius: 3px;
-  background: var(--line);
-}
-
-.shot-placeholder__links i {
-  width: 22px;
-}
-
-.shot-placeholder__hero {
-  display: grid;
-  align-content: center;
-  gap: 8px;
-}
-
-.shot-placeholder__title {
-  display: block;
-  height: 14px;
-  width: 70%;
-  border-radius: 4px;
-  background: var(--ink);
-  opacity: 0.85;
-}
-
-.shot-placeholder__title + .shot-placeholder__title {
-  width: 48%;
-}
-
-.shot-placeholder__line {
-  width: 58%;
-  margin-top: 4px;
-}
-
-.shot-placeholder__pill {
-  width: 64px;
-  height: 18px;
-  margin-top: 8px;
-  border-radius: 999px;
-  background: var(--accent);
-}
-
-.shot-placeholder__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-}
-
-.shot-placeholder__grid i {
-  aspect-ratio: 4 / 3;
-  border-radius: 6px;
-  background: var(--line);
-}
-
-.shot-placeholder__band {
-  height: 48px;
-  border-radius: 6px;
-  background: var(--ink);
-  opacity: 0.85;
-}
-
-.shot-placeholder__label {
-  position: absolute;
-  right: var(--space-1);
-  bottom: var(--space-1);
-  padding: 2px var(--space-1);
-  border-radius: 999px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  color: var(--muted);
+.work-card .browser-frame__screen {
+  aspect-ratio: 16 / 9;
 }
 
 /* Hover scroll (shared by real screenshots and placeholders) */
 .work-card:hover .browser-frame__screen > img,
 .work-card:focus-within .browser-frame__screen > img {
   object-position: bottom center;
-}
-
-.work-card:hover .shot-placeholder,
-.work-card:focus-within .shot-placeholder {
-  /* (170 - 100) / 170 of its own height: shows the bottom edge. */
-  transform: translateY(-41.18%);
 }
 
 /* ---------- 6. Work card + chips ---------- */
