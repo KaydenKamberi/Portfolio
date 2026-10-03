@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery | Ink & Echo Tattoo Collective</title>
+  <meta name="description" content="Explore our extensive tattoo gallery featuring work by Ink & Echo's talented artists. Traditional, neo-traditional, blackwork, fine line, and more.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Concept banner inline styles -->
+  <style>
+    .concept-banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #050505;
+      border-bottom: 1px solid #2a2a2a;
+      padding: 0.5rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      font-size: 0.875rem;
+    }
+    .concept-banner-text {
+      color: #a0a0a0;
+    }
+    .concept-banner-link {
+      color: #a0a0a0;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      text-decoration: none;
+    }
+    .concept-banner-link:hover {
+      color: #8b5cf6;
+    }
+    .main-content {
+      padding-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Concept Banner -->
+  <div class="concept-banner">
+    <span class="concept-banner-text">Concept site for a fictional business, designed by BRAND_NAME</span>
+    <a class="concept-banner-link" href="/">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Back to portfolio
+    </a>
+  </div>
+
+  <main class="main-content">
+    <!-- Gallery Page Header -->
+    <section class="gallery-page-header">
+      <div class="container">
+        <p class="text-accent text-lg mb-sm" style="font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;">
+          Our Work
+        </p>
+        <h1 class="hero-title">Ink & Echo Tattoo Gallery</h1>
+        <p class="hero-tagline">Explore our artistic creations</p>
+        <p class="hero-description">
+          Browse through our extensive collection of tattoos created by our talented artists. 
+          Each piece tells a story and represents the unique style of its creator.
+        </p>
+      </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="gallery-filters">
+          <button class="filter-btn active" data-filter="all">All Tattoos</button>
+          <button class="filter-btn" data-filter="traditional">Traditional</button>
+          <button class="filter-btn" data-filter="neo-traditional">Neo-Traditional</button>
+          <button class="filter-btn" data-filter="blackwork">Blackwork</button>
+          <button class="filter-btn" data-filter="fine-line">Fine Line</button>
+          <button class="filter-btn" data-filter="color">Color</button>
+          <button class="filter-btn" data-filter="portrait">Portrait</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Masonry Grid -->
+    <section class="section" style="padding-bottom: var(--space-3xl);">
+      <div class="container">
+        <div class="gallery-masonry">
+          <!-- Artist: Mira Vasquez - Neo-Traditional -->
+          <figure class="gallery-masonry-item fade-in" data-artist="Mira Vasquez" data-style="neo-traditional color">
+            <img src="img/tattoo-1.webp" alt="Vibrant neo-traditional floral tattoo with red, blue, and yellow flowers" width="400" height="500" loading="lazy">
+            <figcaption class="gallery-masonry-caption">
+              <strong>Floral Masterpiece</strong> - Neo-Traditional by Mira Vasquez
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-masonry-item fade-in" data-artist="Mira Vasquez" data-style="neo-traditional color">
+            <img src="img/tattoo-5.webp" alt="Colorful phoenix tattoo with vibrant reds and oranges" width="400" height="300" loading="lazy">
+            <figcaption class="gallery-masonry-caption">
+              <strong>Phoenix Rising</strong> - Neo-Traditional by Mira Vasquez
+            </figcaption>
+          </figure>
+
+          <!-- Artist: Darius Kane - Blackwork -->
+          <figure class="gallery-masonry-item fade-in" data-artist="Darius Kane" data-style="blackwork">
+            <img src="img/tattoo-2.webp" alt="Intricate geometric blackwork tattoo on forearm" width="400" height="400" loading="lazy">
+            <figcaption class="gallery-masonry-caption">
+              <strong>Sacred Geometry</strong> - Blackwork by Darius Kane
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-masonry-item fade-in" data-artist="Darius Kane" data-style="blackwork portrait">
+            <img src="img/tattoo-6.webp" alt="Detailed black and grey portrait tattoo" width="400" height="450" loading="lazy">
+            <figcaption class="gallery-masonry-caption">
+              <strong>Portrait Study</strong> - Blackwork by Darius Kane
+            </figcaption>
+          </figure>
+
+          <!-- Artist: Lena Chen - Fine Line -->
+          <figure class="gallery-masonry-item fade-in" data-artist="Lena Chen" data-style="fine-line">
+            <img src="img/tattoo-3.webp" alt="Delicate fine line tattoo on wrist with minimalist design" width="400" height="250" loading="lazy">
+            <figcaption class="gallery-masonry-caption">
+              <strong>Whispering Lines</strong> - Fine Line by Lena Chen
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-masonry-item fade-in" data-artist="Lena Chen" data-style="fine-line">
+            <img src="img/gallery-1.webp" alt="Minimalist fine line tattoo with geometric patterns" width="400" height="350" loading="lazy">
+            <figcaption class="gallery-masonry-caption">
+              <strong>Geometric Minimalism</strong> - Fine Line by Lena Chen
+            </figcaption>
+          </figure>
+
+          <!-- Artist: Javier Morales - Traditional -->
+          <figure class="gallery-masonry-item fade-in" data-artist="Javier Morales" data-style="traditional">
+            <img src="img/tattoo-4.webp" alt="Bold traditional anchor tattoo with red and green colors" width="400" height="300" loading="lazy">
+            <figcaption class="gallery-masonry-caption">
+              <strong>Old School Anchor</strong> - Traditional by Javier Morales
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-masonry-item fade-in" data-artist="Javier Morales" data-style="traditional">
+            <img src="img/gallery-2.webp" alt="Traditional eagle tattoo with bold outlines" width="400" height="400" loading="lazy">
+            <figcaption class="gallery-masonry-caption">
+              <strong>Freedom Eagle</strong> - Traditional by Javier Morales
+            </figcaption>
+          </figure>
+
+          <!-- Additional Gallery Images -->
+          <figure class="gallery-masonry-item fade-in" data-artist="Mira Vasquez" data-style="neo-traditional color">
+            <img src="img/gallery-3.webp" alt="Colorful dragon tattoo with vibrant scales" width="400" height="500" loading="lazy">
+            <figcaption class="gallery-masonry-caption">
+              <strong>Dragon's Breath</strong> - Neo-Traditional by Mira Vasquez
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-masonry-item fade-in" data-artist="Darius Kane" data-style="blackwork">
+            <img src="img/gallery-4.webp" alt="Complex mandala blackwork tattoo" width="400" height="350" loading="lazy">
+            <figcaption class="gallery-masonry-caption">
+              <strong>Mandala Meditation</strong> - Blackwork by Darius Kane
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-masonry-item fade-in" data-artist="Lena Chen" data-style="fine-line">
+            <img src="img/gallery-5.webp" alt="Fine line floral tattoo with delicate petals" width="400" height="450" loading="lazy">
+            <figcaption class="gallery-masonry-caption">
+              <strong>Petal Perfection</strong> - Fine Line by Lena Chen
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-masonry-item fade-in" data-artist="Javier Morales" data-style="traditional">
+            <img src="img/gallery-6.webp" alt="Traditional rose tattoo with classic styling" width="400" height="300" loading="lazy">
+            <figcaption class="gallery-masonry-caption">
+              <strong>Classic Rose</strong> - Traditional by Javier Morales
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-masonry-item fade-in" data-artist="Mira Vasquez" data-style="color portrait">
+            <img src="img/gallery-7.webp" alt="Color portrait tattoo of a loved one" width="400" height="500" loading="lazy">
+            <figcaption class="gallery-masonry-caption">
+              <strong>Loved One Portrait</strong> - Color Portrait by Mira Vasquez
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-masonry-item fade-in" data-artist="Darius Kane" data-style="blackwork">
+            <img src="img/gallery-8.webp" alt="Blackwork sleeve tattoo with intricate patterns" width="400" height="600" loading="lazy">
+            <figcaption class="gallery-masonry-caption">
+              <strong>Patterned Sleeve</strong> - Blackwork by Darius Kane
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2 class="cta-title">Inspired to Get Ink&eacute;d?</h2>
+          <p class="cta-description">
+            Our gallery showcases just a fraction of what we can create. Each tattoo is custom designed 
+            to match your unique vision and style. Ready to start your own tattoo journey?
+          </p>
+          <div class="cta-buttons">
+            <a href="index.html#booking" class="btn btn-primary">Book Consultation</a>
+            <a href="index.html" class="btn btn-secondary">Back to Home</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="footer-brand">Ink & Echo</h3>
+          <p class="footer-tagline">Tattoo Collective</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#artists">Artists</a></li>
+            <li><a href="index.html#booking">Booking</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="index.html#styles">Tattoo Styles</a></li>
+            <li><a href="#">Piercings</a></li>
+            <li><a href="#">Cover-ups</a></li>
+            <li><a href="#">Consultations</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="tel:+15035550123">(503) 555-0123</a></li>
+            <li><a href="mailto:info@inkandecho.com">info@inkandecho.com</a></li>
+            <li><a href="https://instagram.com/inkandechotattoo" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://facebook.com/inkandechotattoo" target="_blank" rel="noopener">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Ink & Echo Tattoo Collective. All rights reserved.</p>
+        <p>Ink & Echo is a fictional tattoo shop, built as a portfolio demonstration.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
