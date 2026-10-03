@@ -1,4 +1,4 @@
-# Replace BRAND_NAME.netlify.app with the final public hostname before launch.
+# Replace Next Door Web Development.netlify.app with the final public hostname before launch.
 User-agent: *
 Allow: /
 Disallow: /thanks/
@@ -14,4 +14,4 @@ Disallow: /.cache/
 Disallow: /demos/construction/content/
 Disallow: /demos/construction/scripts/
 
-Sitemap: https://BRAND_NAME.netlify.app/sitemap.xml
+Sitemap: https://Next Door Web Development.netlify.app/sitemap.xml
