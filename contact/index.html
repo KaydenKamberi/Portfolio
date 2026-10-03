@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Start a project — BRAND_NAME</title>
+  <meta name="description" content="Tell BRAND_NAME about your business and the website you need. Start a conversation about your next project.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/assets/css/contact.css">
+  <script src="/assets/js/form.js" defer></script>
+</head>
+<body class="contact-page">
+  <a class="contact-skip" href="#main">Skip to content</a>
+  <!-- TEMP HEADER -->
+  <header class="temp-header contact-wrap">
+    <a class="temp-brand" href="/">BRAND_NAME</a>
+    <nav aria-label="Main"><a href="/#work">Work</a> <a href="/contact/" aria-current="page">Contact</a></nav>
+  </header>
+  <!-- /TEMP HEADER -->
+  <main id="main" class="contact-wrap contact-main">
+    <div class="contact-intro">
+      <p class="contact-eyebrow">Start a project</p>
+      <h1>Let’s talk about<br>your website.</h1>
+      <p>Tell me a little about your business and what you have in mind. I’ll reply within two business days to discuss the next step.</p>
+      <p>Prefer email? <a href="mailto:BRAND_EMAIL">BRAND_EMAIL</a></p>
+    </div>
+    <form name="contact" method="POST" action="/thanks/"
+          data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+      <input type="hidden" name="form-name" value="contact">
+      <p hidden><label>Leave this empty <input name="bot-field"></label></p>
+      <p class="form-note">Fields marked with an asterisk (*) are required.</p>
+      <div class="contact-fields">
+        <div class="contact-field">
+          <label for="name">Your name *</label>
+          <input id="name" name="name" type="text" autocomplete="name" minlength="2" maxlength="80" required aria-describedby="name-error">
+          <p id="name-error" class="field-error" data-error-for="name" hidden></p>
+        </div>
+        <div class="contact-field">
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+          <p id="email-error" class="field-error" data-error-for="email" hidden></p>
+        </div>
+        <div class="contact-field">
+          <label for="phone">Phone <span id="phone-label">(optional)</span></label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel-national" inputmode="tel" pattern="(?:[ \(\)\-]*[0-9]){10}[ \(\)\-]*" aria-describedby="phone-hint phone-error">
+          <p id="phone-hint" class="field-hint">10 digits. Required if you choose Text or Call below.</p>
+          <p id="phone-error" class="field-error" data-error-for="phone" hidden></p>
+        </div>
+        <div class="contact-field">
+          <label for="business">Business name <span>(optional)</span></label>
+          <input id="business" name="business" type="text" autocomplete="organization" maxlength="100" aria-describedby="business-error">
+          <p id="business-error" class="field-error" data-error-for="business" hidden></p>
+        </div>
+        <div class="contact-field contact-field-wide">
+          <label for="project-type">What do you need? *</label>
+          <select id="project-type" name="project_type" required aria-describedby="project-type-error">
+            <option value="">Choose an option</option>
+            <option value="New website">New website</option>
+            <option value="Redesign">Redesign</option>
+            <option value="One-page site">One-page site</option>
+            <option value="Not sure yet">Not sure yet</option>
+          </select>
+          <p id="project-type-error" class="field-error" data-error-for="project_type" hidden></p>
+        </div>
+        <fieldset class="contact-field contact-field-wide" aria-describedby="contact-pref-error">
+          <legend>Best way to reach you *</legend>
+          <div class="contact-options">
+            <label><input name="contact_pref" type="radio" value="Email" required> Email</label>
+            <label><input name="contact_pref" type="radio" value="Text" required> Text</label>
+            <label><input name="contact_pref" type="radio" value="Call" required> Call</label>
+          </div>
+          <p id="contact-pref-error" class="field-error" data-error-for="contact_pref" hidden></p>
+        </fieldset>
+        <div class="contact-field contact-field-wide">
+          <label for="message">Tell me about it *</label>
+          <textarea id="message" name="message" rows="6" minlength="10" maxlength="1000" required aria-describedby="message-hint message-error message-count"></textarea>
+          <div class="message-help">
+            <p id="message-hint" class="field-hint">10–1,000 characters. Your goals, timeline, and any questions are a good start.</p>
+            <p id="message-count" class="field-hint" hidden>0 / 1,000</p>
+          </div>
+          <p id="message-error" class="field-error" data-error-for="message" hidden></p>
+        </div>
+      </div>
+      <button class="contact-button" type="submit">Send message</button>
+      <p class="field-hint">I'll only use this to reply to you. No spam, no sharing.</p>
+      <p id="submit-error" class="submit-error" role="alert" hidden>Something went wrong. Email me at <a href="mailto:BRAND_EMAIL">BRAND_EMAIL</a> instead.</p>
+      <p class="contact-status" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+  <!-- TEMP FOOTER -->
+  <footer class="temp-footer contact-wrap">
+    <p>BRAND_NAME</p><a href="/contact/">Start a project</a>
+  </footer>
+  <!-- /TEMP FOOTER -->
+</body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace BRAND_NAME.netlify.app with the actual public hostname before launch.
+     Agent A's case-study routes can be added once those pages exist. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://BRAND_NAME.netlify.app/</loc></url>
+  <url><loc>https://BRAND_NAME.netlify.app/contact/</loc></url>
+  <url><loc>https://BRAND_NAME.netlify.app/demos/marisol/</loc></url>
+  <url><loc>https://BRAND_NAME.netlify.app/demos/marisol/menu.html</loc></url>
+  <url><loc>https://BRAND_NAME.netlify.app/demos/marisol/locations.html</loc></url>
+  <url><loc>https://BRAND_NAME.netlify.app/demos/marisol/about.html</loc></url>
+  <url><loc>https://BRAND_NAME.netlify.app/demos/construction/</loc></url>
+  <url><loc>https://BRAND_NAME.netlify.app/demos/construction/services.html</loc></url>
+  <url><loc>https://BRAND_NAME.netlify.app/demos/construction/work.html</loc></url>
+  <url><loc>https://BRAND_NAME.netlify.app/demos/construction/contact.html</loc></url>
+</urlset>

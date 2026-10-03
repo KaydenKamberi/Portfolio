@@ -38,8 +38,22 @@
   </script>
 
   <link rel="stylesheet" href="assets/css/custom.css">
+  <!-- Self-contained concept banner; keep demo branding separate. -->
+  <style>
+    body { padding-top: 48px; }
+    .site-header, .menu-jump { top: 48px; }
+    .menu-section-head { scroll-margin-top: 120px; }
+    .portfolio-concept { position: fixed; inset: 0 0 auto; z-index: 10000; height: 48px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 6px 16px; background: #15140f; color: #fff; font: 12px/1.4 system-ui, sans-serif; }
+    .portfolio-concept a { flex-shrink: 0; color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+    .portfolio-concept a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+    @media (max-width: 400px) { .portfolio-concept { padding-inline: 8px; gap: 8px; font-size: 11px; } }
+  </style>
 </head>
 <body>
+  <aside class="portfolio-concept" aria-label="Concept site notice">
+    <span>Concept site for a fictional business, designed by BRAND_NAME</span>
+    <a href="/">← Back to portfolio</a>
+  </aside>
 
   <a class="skip-link" href="#main">Skip to content</a>
   <span class="header-sentinel" data-header-sentinel aria-hidden="true"></span>
@@ -88,7 +102,7 @@
           </div>
 
           <figure class="hero-photo">
-            <img src="assets/images/hero.jpg"
+            <img src="assets/images/hero.webp"
                  alt="An oceanfront deck at Marisol with white tables and chairs under a palm tree and strung lights, the beach beyond."
                  width="480" height="640" decoding="async">
           </figure>
@@ -128,7 +142,7 @@
         <ul class="dish-grid">
           <li class="dish">
             <figure>
-              <img src="assets/images/dish-ceviche-verde.jpg"
+              <img src="assets/images/dish-ceviche-verde.webp"
                    alt="A small bowl of green ceviche on a patterned tile counter."
                    width="148" height="148" loading="lazy" decoding="async">
             </figure>
@@ -140,7 +154,7 @@
           </li>
           <li class="dish">
             <figure>
-              <img src="assets/images/dish-baja-fish-taco.jpg"
+              <img src="assets/images/dish-baja-fish-taco.webp"
                    alt="Three fish tacos on flour tortillas with red cabbage, pico de gallo, avocado and lime."
                    width="554" height="554" loading="lazy" decoding="async">
             </figure>
@@ -152,7 +166,7 @@
           </li>
           <li class="dish">
             <figure>
-              <img src="assets/images/dish-branzino.jpg"
+              <img src="assets/images/dish-branzino.webp"
                    alt="A whole grilled branzino on a blue patterned platter with cherry tomatoes, red onion and dill."
                    width="452" height="678" loading="lazy" decoding="async">
             </figure>
@@ -164,7 +178,7 @@
           </li>
           <li class="dish">
             <figure>
-              <img src="assets/images/dish-camarones.jpg"
+              <img src="assets/images/dish-camarones.webp"
                    alt="A bowl of shrimp in garlic chilli butter, scattered with chopped parsley."
                    width="452" height="678" loading="lazy" decoding="async">
             </figure>
@@ -187,7 +201,7 @@
           <li class="reveal">
             <a class="visit-card" href="locations.html#la-jolla">
               <figure class="visit-photo">
-                <img src="assets/images/location-la-jolla.jpg"
+                <img src="assets/images/location-la-jolla.webp"
                      alt="The La Jolla dining room, with a painted teal mural reading Marisol behind pale wood chairs and marble tables."
                      width="800" height="1000" loading="lazy" decoding="async">
               </figure>
@@ -199,7 +213,7 @@
           <li class="reveal">
             <a class="visit-card" href="locations.html#north-park">
               <figure class="visit-photo">
-                <img src="assets/images/location-north-park.jpg"
+                <img src="assets/images/location-north-park.webp"
                      alt="The North Park frontage, with a yellow Marisol awning over tall windows and pavement tables under green umbrellas."
                      width="800" height="1000" loading="lazy" decoding="async">
               </figure>
@@ -211,7 +225,7 @@
           <li class="reveal">
             <a class="visit-card" href="locations.html#coronado">
               <figure class="visit-photo">
-                <img src="assets/images/location-coronado.jpg"
+                <img src="assets/images/location-coronado.webp"
                      alt="The Coronado storefront under a green and white striped awning, with planters and globe lights along the pavement."
                      width="800" height="1000" loading="lazy" decoding="async">
               </figure>
