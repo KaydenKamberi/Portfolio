@@ -1,0 +1,221 @@
+<!doctype html>
+<!--
+  Case study template. Owned by Agent A.
+  To make a case study: copy this file to /work/<slug>/index.html, then replace every
+  {{TOKEN}} with the copy from content/case-studies.md (the "## <slug>" section).
+
+  {{SLUG}}        marisol | construction | tattoo
+  {{TITLE}}       Title
+  {{RESULT}}      One-line result
+  {{CATEGORY}}    Short label for the eyebrow, e.g. "Restaurant"
+  {{BRIEF}}       The brief (2 to 3 sentences)
+  {{BUILT}}       What I built (3 to 4 sentences)
+  {{FEATURE_1..3}} Key features (3 bullets)
+  {{TAG_1..n}}    Tags (3 to 5 chips; delete unused <li>s)
+  {{NEXT_SLUG}} / {{NEXT_TITLE}}  The next case study in the loop
+
+  Screenshots: /assets/img/{{SLUG}}/desktop.webp (1600x1000) and mobile.webp (780x1688).
+  Remove the robots noindex line in the copied page.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>{{TITLE}} case study | BRAND_NAME</title>
+  <meta name="description" content="{{RESULT}}">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{TITLE}} case study | BRAND_NAME">
+  <meta property="og:description" content="{{RESULT}}">
+  <meta property="og:image" content="/assets/img/{{SLUG}}/desktop.webp">
+  <link rel="icon" href="data:,">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="/assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" data-site-header>
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="/">BRAND_NAME</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="/#work" aria-current="page">Work</a>
+        <a href="/#services">Services</a>
+        <a href="/#process">Process</a>
+        <a class="btn btn--primary btn--sm" href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== Intro ===== -->
+    <div class="container">
+      <header class="case-hero">
+        <a class="text-link case-hero__back" href="/#work"><span aria-hidden="true">&larr;</span> All work</a>
+        <p class="eyebrow">Case study · {{CATEGORY}}</p>
+        <h1 class="case-hero__title">{{TITLE}}</h1>
+        <p class="lead">{{RESULT}}</p>
+        <ul class="chips" aria-label="Tags">
+          <li class="chip">{{TAG_1}}</li>
+          <li class="chip">{{TAG_2}}</li>
+          <li class="chip">{{TAG_3}}</li>
+          <li class="chip">{{TAG_4}}</li>
+          <li class="chip">{{TAG_5}}</li>
+        </ul>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="/demos/{{SLUG}}/">View live demo <span aria-hidden="true">&nearr;</span></a>
+        </div>
+      </header>
+
+      <!-- ===== Hero screenshot (above the fold: no lazy loading) ===== -->
+      <figure class="case-shot">
+        <div class="browser-frame">
+          <div class="browser-frame__bar">
+            <span class="browser-frame__dot"></span><span class="browser-frame__dot"></span><span class="browser-frame__dot"></span>
+            <span class="browser-frame__url">{{SLUG}}.example</span>
+          </div>
+          <div class="browser-frame__screen">
+            <img src="/assets/img/{{SLUG}}/desktop.webp" alt="Home page of the {{TITLE}} concept site on a desktop browser" width="1600" height="1000" fetchpriority="high">
+          </div>
+        </div>
+      </figure>
+    </div>
+
+    <!-- ===== Body ===== -->
+    <section class="section section--rule" aria-label="Project details">
+      <div class="container case-body">
+        <dl class="case-facts">
+          <div>
+            <dt class="eyebrow">Client</dt>
+            <dd>{{TITLE}} (fictional business)</dd>
+          </div>
+          <div>
+            <dt class="eyebrow">Type</dt>
+            <dd>{{CATEGORY}}</dd>
+          </div>
+          <div>
+            <dt class="eyebrow">Role</dt>
+            <dd>Design, copy and front-end build</dd>
+          </div>
+          <div>
+            <dt class="eyebrow">Live</dt>
+            <dd><a href="/demos/{{SLUG}}/">/demos/{{SLUG}}/</a></dd>
+          </div>
+        </dl>
+
+        <div class="case-prose">
+          <section aria-labelledby="brief-title" data-reveal>
+            <h2 id="brief-title">The brief</h2>
+            <p>{{BRIEF}}</p>
+          </section>
+
+          <section aria-labelledby="built-title" data-reveal>
+            <h2 id="built-title">What I built</h2>
+            <p>{{BUILT}}</p>
+          </section>
+
+          <section aria-labelledby="features-title" data-reveal>
+            <h2 id="features-title">Key features</h2>
+            <ol class="features">
+              <li>{{FEATURE_1}}</li>
+              <li>{{FEATURE_2}}</li>
+              <li>{{FEATURE_3}}</li>
+            </ol>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Mobile + desktop ===== -->
+    <section class="section section--rule" aria-labelledby="devices-title">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">On every screen</p>
+          <h2 id="devices-title" data-reveal>Built for the phone first, then the desktop.</h2>
+        </header>
+        <div class="case-devices">
+          <figure data-reveal>
+            <div class="browser-frame">
+              <div class="browser-frame__bar">
+                <span class="browser-frame__dot"></span><span class="browser-frame__dot"></span><span class="browser-frame__dot"></span>
+                <span class="browser-frame__url">{{SLUG}}.example</span>
+              </div>
+              <div class="browser-frame__screen">
+                <img src="/assets/img/{{SLUG}}/desktop.webp" alt="{{TITLE}} concept site on desktop" width="1600" height="1000" loading="lazy">
+              </div>
+            </div>
+            <figcaption>Desktop</figcaption>
+          </figure>
+          <figure data-reveal style="--reveal-delay: 80ms">
+            <div class="browser-frame browser-frame--phone">
+              <div class="browser-frame__bar">
+                <span class="browser-frame__dot"></span><span class="browser-frame__dot"></span><span class="browser-frame__dot"></span>
+              </div>
+              <div class="browser-frame__screen">
+                <img src="/assets/img/{{SLUG}}/mobile.webp" alt="{{TITLE}} concept site on a phone" width="780" height="1688" loading="lazy">
+              </div>
+            </div>
+            <figcaption>Mobile</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Next + CTA ===== -->
+    <section class="section" aria-labelledby="cta-title">
+      <div class="container">
+        <nav class="case-next" aria-label="More work">
+          <a class="text-link" href="/demos/{{SLUG}}/">View live demo <span aria-hidden="true">&nearr;</span></a>
+          <a class="text-link" href="/work/{{NEXT_SLUG}}/">Next: {{NEXT_TITLE}} <span aria-hidden="true">&rarr;</span></a>
+        </nav>
+        <div class="cta" style="margin-top: var(--space-5)" data-reveal>
+          <p class="eyebrow">Start a project</p>
+          <h2 class="cta__title" id="cta-title">Want a site like this for <em>your business?</em></h2>
+          <p>Tell me a little about what you do. It takes under a minute, and I&rsquo;ll get back to you with next steps.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="/contact/">Start a project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <div>
+          <a class="site-footer__brand" href="/">BRAND_NAME</a>
+          <p class="site-footer__tagline">Fast, good-looking websites for small businesses that want more calls, bookings and walk-ins.</p>
+        </div>
+        <nav aria-labelledby="footer-site">
+          <h2 id="footer-site">Site</h2>
+          <ul>
+            <li><a href="/#work">Work</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#process">Process</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 id="footer-contact">Get in touch</h2>
+          <ul aria-labelledby="footer-contact">
+            <li><a href="mailto:BRAND_EMAIL">BRAND_EMAIL</a></li>
+            <li><a href="/contact/">Start a project</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__base">
+        <p>&copy; 2026 BRAND_NAME</p>
+        <p>Demo sites are concept work for fictional businesses.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
