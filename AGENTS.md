@@ -94,3 +94,7 @@ Put `<main id="main">` between the header and footer so the skip link works. For
   </div>
 </footer>
 ```
+
+## Replit setup (do not change)
+
+The Replit preview serves the repo root. Never edit .replit, never add a --directory flag to the server command, and never create a public/ folder.
