@@ -1,0 +1,28 @@
+/* assets/css/tokens.css (committed by Kayden in CP0; nobody edits it) */
+:root {
+  --bg: #F4F1EA;        /* warm paper */
+  --surface: #FFFFFF;
+  --ink: #15140F;       /* text */
+  --muted: #6B675E;
+  --line: #DDD7CB;
+  --accent: #E4572E;    /* tomato: buttons, links, highlights only */
+  --accent-ink: #FFFFFF;
+
+  --font-display: "Instrument Serif", Georgia, serif;
+  --font-body: "Geist", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+
+  --step-0: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --step-1: clamp(1.25rem, 1.1rem + 0.6vw, 1.6rem);
+  --step-2: clamp(1.75rem, 1.4rem + 1.5vw, 2.75rem);
+  --step-3: clamp(2.5rem, 1.8rem + 3.5vw, 5rem);
+
+  --space-1: 0.5rem; --space-2: 1rem; --space-3: 1.5rem;
+  --space-4: 2.5rem; --space-5: 4rem;  --space-6: 6rem;
+  --radius: 14px;
+  --max: 1180px;
+  --shadow: 0 20px 50px -20px rgb(21 20 15 / 0.25);
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#12110E; --surface:#1C1B17; --ink:#F4F1EA; --muted:#A39E92; --line:#2E2C26; }
+}
