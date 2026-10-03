@@ -7,16 +7,29 @@
   <meta name="description" content="Thank you for contacting BRAND_NAME. Here is what happens next with your website enquiry.">
   <meta name="robots" content="noindex, follow">
   <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
   <link rel="stylesheet" href="/assets/css/contact.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="/assets/js/main.js" defer></script>
 </head>
 <body class="contact-page">
-  <a class="contact-skip" href="#main">Skip to content</a>
-  <!-- TEMP HEADER -->
-  <header class="temp-header contact-wrap">
-    <a class="temp-brand" href="/">BRAND_NAME</a>
-    <nav aria-label="Main"><a href="/#work">Work</a> <a href="/contact/">Contact</a></nav>
-  </header>
-  <!-- /TEMP HEADER -->
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" data-site-header>
+  <div class="container site-header__inner">
+    <a class="site-header__brand" href="/">BRAND_NAME</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/#work">Work</a>
+      <a href="/#services">Services</a>
+      <a href="/#process">Process</a>
+      <a class="btn btn--primary btn--sm" href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
   <main id="main" class="contact-wrap thanks-main">
     <p class="contact-eyebrow">Message received</p>
     <h1>Thanks for<br>getting in touch.</h1>
@@ -24,10 +37,35 @@
     <p>Next, we’ll discuss your goals, the scope of the website, and how we can move forward. There’s no commitment at this stage.</p>
     <a class="contact-button" href="/#work">Back to the work</a>
   </main>
-  <!-- TEMP FOOTER -->
-  <footer class="temp-footer contact-wrap">
-    <p>BRAND_NAME</p><a href="/contact/">Start a project</a>
-  </footer>
-  <!-- /TEMP FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__inner">
+      <div>
+        <a class="site-footer__brand" href="/">BRAND_NAME</a>
+        <p class="site-footer__tagline">Fast, good-looking websites for small businesses that want more calls, bookings and walk-ins.</p>
+      </div>
+      <nav aria-labelledby="footer-site">
+        <h2 id="footer-site">Site</h2>
+        <ul>
+          <li><a href="/#work">Work</a></li>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/#process">Process</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 id="footer-contact">Get in touch</h2>
+        <ul aria-labelledby="footer-contact">
+          <li><a href="mailto:BRAND_EMAIL">BRAND_EMAIL</a></li>
+          <li><a href="/contact/">Start a project</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__base">
+      <p>&copy; 2026 BRAND_NAME</p>
+      <p>Demo sites are concept work for fictional businesses.</p>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
