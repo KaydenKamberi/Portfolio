@@ -32,10 +32,65 @@ Your owned files are listed in SPEC.md under "Repo layout and file ownership". Y
 
 Agent A: paste the final header and footer HTML below at the end of Checkpoint 1. Agent B: copy them verbatim into the contact and thanks pages.
 
+Each page also needs this in `<head>` (fonts, tokens, shared CSS, and `main.js` for the header border and scroll reveal):
+
 ```html
-<!-- HEADER: Agent A fills this in -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="/assets/css/tokens.css">
+<link rel="stylesheet" href="/assets/css/base.css">
+<link rel="stylesheet" href="/assets/css/components.css">
+<script>document.documentElement.classList.add("js");</script>
+<script src="/assets/js/main.js" defer></script>
+```
+
+Put `<main id="main">` between the header and footer so the skip link works. Form fields can use the `.field`, `.field__label`, `.field__input` and `.field__error` classes from `components.css` (markup example in section 11 of that file).
+
+```html
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" data-site-header>
+  <div class="container site-header__inner">
+    <a class="site-header__brand" href="/">BRAND_NAME</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/#work">Work</a>
+      <a href="/#services">Services</a>
+      <a href="/#process">Process</a>
+      <a class="btn btn--primary btn--sm" href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
 ```
 
 ```html
-<!-- FOOTER: Agent A fills this in -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__inner">
+      <div>
+        <a class="site-footer__brand" href="/">BRAND_NAME</a>
+        <p class="site-footer__tagline">Fast, good-looking websites for small businesses that want more calls, bookings and walk-ins.</p>
+      </div>
+      <nav aria-labelledby="footer-site">
+        <h2 id="footer-site">Site</h2>
+        <ul>
+          <li><a href="/#work">Work</a></li>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/#process">Process</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 id="footer-contact">Get in touch</h2>
+        <ul aria-labelledby="footer-contact">
+          <li><a href="mailto:BRAND_EMAIL">BRAND_EMAIL</a></li>
+          <li><a href="/contact/">Start a project</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__base">
+      <p>&copy; 2026 BRAND_NAME</p>
+      <p>Demo sites are concept work for fictional businesses.</p>
+    </div>
+  </div>
+</footer>
 ```
