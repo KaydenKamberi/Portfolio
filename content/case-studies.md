@@ -40,20 +40,20 @@
 
 ## tattoo
 
-**Title:** Ink & Echo Tattoo Collective
+**Title:** Black Rose Tattoo
 
-**One-line result:** A dark, bold portfolio site for a Portland tattoo collective that showcases artistry and drives bookings
+**One-line result:** A moody, gallery-style site for a Portland tattoo studio that turns browsers into booked consultations
 
-**The brief:** Ink & Echo needed a website that reflected their edgy, artistic brand while making it easy for potential clients to browse styles, view artist portfolios, and book consultations. The design had to be distinctly different from the other demos in the portfolio, with a dark color scheme that lets the tattoo artwork pop. The site needed to handle image-heavy content efficiently and provide clear paths to booking for each artist.
+**The brief:** Black Rose is an appointment-first custom tattoo studio in Portland with three resident artists, each known for a different style. The studio wanted a site that felt as premium as its work, helped visitors find the right artist for their idea, and made booking a free consultation easy from a phone.
 
-**What I built:** A complete concept website featuring a home page with hero section, artist profiles, featured work gallery, tattoo styles showcase, booking process explanation, FAQ section, and location/hours information. A dedicated gallery page uses a masonry layout with filterable categories. The design uses a dark background with electric purple and cyan accents, custom typography with Bebas Neue for headlines and Inter for body text. All pages include the concept banner and maintain consistent branding.
+**What I built:** A four-page static site in plain HTML, CSS and JavaScript with a "gallery after dark" look: near-black backgrounds, deep crimson accents, and Cormorant Garamond headlines over a full-bleed photo of the storefront. The home page walks visitors from the hero through recent work, a four-step process, artist cards, rotating reviews and an FAQ. The gallery filters pieces by style and opens each one in a full-screen lightbox, and every artist profile has a "Book with" button that pre-selects that artist on the booking form. The contact page shows a live "Open now" status in Portland time next to a booking form that asks for style, size, placement and reference images, with inline validation.
 
 **Key features:**
-- Responsive masonry gallery with style filtering
-- Interactive FAQ accordion
-- Artist profile cards with specialty tags
+- Style-filtered gallery with a full-screen lightbox
+- Booking form that pre-selects the chosen artist and accepts reference images
+- Live "Open now" status calculated in the studio's time zone
 
-**Tags:** tattoo, creative, portfolio, gallery, dark theme
+**Tags:** tattoo, custom studio, gallery, booking, dark theme
 
 ---
 

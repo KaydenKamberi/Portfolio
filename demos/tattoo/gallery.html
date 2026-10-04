@@ -1,269 +1,270 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gallery | Ink & Echo Tattoo Collective</title>
-  <meta name="description" content="Explore our extensive tattoo gallery featuring work by Ink & Echo's talented artists. Traditional, neo-traditional, blackwork, fine line, and more.">
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Black Rose Tattoo</title>
+  <meta name="description" content="Browse custom tattoo work from Black Rose Tattoo in Portland: fine line, realism, traditional, watercolor, geometric, blackwork, portrait, floral and Japanese.">
+  <meta name="theme-color" content="#0b0809">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Black Rose Tattoo">
+  <meta property="og:title" content="Gallery | Black Rose Tattoo">
+  <meta property="og:description" content="Browse custom tattoo work from Black Rose Tattoo in Portland: fine line, realism, traditional, watercolor, geometric, blackwork, portrait, floral and Japanese.">
+  <meta property="og:image" content="hero.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="css/style.css">
-  
-  <!-- Concept banner inline styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=2">
+  <script>document.documentElement.classList.add('js');</script>
+  <!-- Self-contained concept banner; keep demo branding separate. -->
   <style>
-    .concept-banner {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: #050505;
-      border-bottom: 1px solid #2a2a2a;
-      padding: 0.5rem 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-      font-size: 0.875rem;
-    }
-    .concept-banner-text {
-      color: #a0a0a0;
-    }
-    .concept-banner-link {
-      color: #a0a0a0;
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
-      text-decoration: none;
-    }
-    .concept-banner-link:hover {
-      color: #8b5cf6;
-    }
-    .main-content {
-      padding-top: 60px;
-    }
+    html { scroll-padding-top: 48px; }
+    body { padding-top: 48px; }
+    .site-header { top: 48px; }
+    .skip-link:focus { top: calc(48px + var(--space-2)); }
+    .portfolio-concept { position: fixed; inset: 0 0 auto; z-index: 10000; height: 48px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 6px 16px; background: #15140f; color: #fff; font: 12px/1.4 system-ui, sans-serif; }
+    .portfolio-concept a { flex-shrink: 0; color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+    .portfolio-concept a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+    @media (max-width: 400px) { .portfolio-concept { padding-inline: 8px; gap: 8px; font-size: 11px; } }
   </style>
 </head>
 <body>
-  <!-- Concept Banner -->
-  <div class="concept-banner">
-    <span class="concept-banner-text">Concept site for a fictional business, designed by Next Door Web Development</span>
-    <a class="concept-banner-link" href="/">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M19 12H5M12 19l-7-7 7-7"/>
-      </svg>
-      Back to portfolio
-    </a>
-  </div>
+  <aside class="portfolio-concept" aria-label="Concept site notice">
+    <span>Concept site for a fictional business, designed by Next Door Web Development</span>
+    <a href="/">← Back to portfolio</a>
+  </aside>
 
-  <main class="main-content">
-    <!-- Gallery Page Header -->
-    <section class="gallery-page-header">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="Black Rose Tattoo home">
+        <span class="logo__mark">Black <span>Rose</span></span>
+        <span class="logo__sub">Tattoo Studio</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+          <li><a href="artists.html">Artists</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="contact.html#book" class="btn btn--sm">Book Now</a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li><a href="index.html">Home <small>01</small></a></li>
+        <li><a href="gallery.html" aria-current="page">Gallery <small>02</small></a></li>
+        <li><a href="artists.html">Artists <small>03</small></a></li>
+        <li><a href="contact.html">Contact <small>04</small></a></li>
+      </ul>
+      <div class="mobile-menu__footer">
+        <a href="contact.html#book" class="btn btn--block">Book a Consultation</a>
+        <p>123 Ink Street, Portland, OR &nbsp;·&nbsp; <a href="tel:+15551234567">(555) 123-4567</a></p>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-banner">
+      <div class="page-banner__media">
+        <picture>
+          <img src="hero.webp" alt="" width="1600" height="826" style="object-position: 50% 75%;">
+        </picture>
+      </div>
       <div class="container">
-        <p class="text-accent text-lg mb-sm" style="font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;">
-          Our Work
-        </p>
-        <h1 class="hero-title">Ink & Echo Tattoo Gallery</h1>
-        <p class="hero-tagline">Explore our artistic creations</p>
-        <p class="hero-description">
-          Browse through our extensive collection of tattoos created by our talented artists. 
-          Each piece tells a story and represents the unique style of its creator.
-        </p>
+        <nav class="breadcrumb reveal" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Gallery</span>
+        </nav>
+        <h1 class="reveal" style="--d:.08s">Our <em>work</em></h1>
+        <p class="reveal" style="--d:.16s">A selection of recent pieces from our resident artists. Tap any piece to take a closer look.</p>
       </div>
     </section>
 
-    <!-- Gallery Filters -->
-    <section class="section" style="padding-top: 0;">
+    <section class="section">
       <div class="container">
-        <div class="gallery-filters">
-          <button class="filter-btn active" data-filter="all">All Tattoos</button>
-          <button class="filter-btn" data-filter="traditional">Traditional</button>
-          <button class="filter-btn" data-filter="neo-traditional">Neo-Traditional</button>
-          <button class="filter-btn" data-filter="blackwork">Blackwork</button>
-          <button class="filter-btn" data-filter="fine-line">Fine Line</button>
-          <button class="filter-btn" data-filter="color">Color</button>
-          <button class="filter-btn" data-filter="portrait">Portrait</button>
+        <div class="filters reveal" role="group" aria-label="Filter by style">
+          <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">All Work</button>
+          <button type="button" class="filter-btn" data-filter="fine-line" aria-pressed="false">Fine Line</button>
+          <button type="button" class="filter-btn" data-filter="black-grey" aria-pressed="false">Black &amp; Grey</button>
+          <button type="button" class="filter-btn" data-filter="color" aria-pressed="false">Color</button>
+        </div>
+        <div class="work-grid gallery-grid">
+          <figure class="work-item reveal" data-category="fine-line" data-lightbox tabindex="0" role="button" aria-label="View Fine Line tattoo by Jamie Rivera" style="--d:0.00s">
+            <img src="finelinetattoo.webp" alt="Fine line tattoo of flowers and butterflies trailing up the forearm" loading="lazy" style="object-position: center;">
+            <figcaption class="work-item__caption">
+              <div>
+                <h3>Fine Line</h3>
+                <p>by Jamie Rivera</p>
+              </div>
+              <span class="work-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+            </figcaption>
+          </figure>
+          <figure class="work-item reveal" data-category="color" data-lightbox tabindex="0" role="button" aria-label="View Traditional tattoo by Ryan Cole" style="--d:0.08s">
+            <img src="traditionaltattoo.webp" alt="Neo-traditional tattoo of a woman framed by orange peonies on the upper arm" loading="lazy" style="object-position: center;">
+            <figcaption class="work-item__caption">
+              <div>
+                <h3>Traditional</h3>
+                <p>by Ryan Cole</p>
+              </div>
+              <span class="work-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+            </figcaption>
+          </figure>
+          <figure class="work-item reveal" data-category="black-grey" data-lightbox tabindex="0" role="button" aria-label="View Realism tattoo by Alex Carter" style="--d:0.16s">
+            <img src="realismtattoo.webp" alt="Black and grey realism tattoo of a lion on the forearm" loading="lazy" style="object-position: center;">
+            <figcaption class="work-item__caption">
+              <div>
+                <h3>Realism</h3>
+                <p>by Alex Carter</p>
+              </div>
+              <span class="work-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+            </figcaption>
+          </figure>
+          <figure class="work-item reveal" data-category="color" data-lightbox tabindex="0" role="button" aria-label="View Watercolor tattoo by Jamie Rivera" style="--d:0.00s">
+            <img src="watercolortattoo.webp" alt="Watercolor tattoo of a mushroom and crown with paint-splash color on the forearm" loading="lazy" style="object-position: center;">
+            <figcaption class="work-item__caption">
+              <div>
+                <h3>Watercolor</h3>
+                <p>by Jamie Rivera</p>
+              </div>
+              <span class="work-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+            </figcaption>
+          </figure>
+          <figure class="work-item reveal" data-category="black-grey" data-lightbox tabindex="0" role="button" aria-label="View Geometric tattoo by Ryan Cole" style="--d:0.08s">
+            <img src="geometrictattoo.webp" alt="Geometric tattoo of repeating spiral patterns across the back and side" loading="lazy" style="object-position: center;">
+            <figcaption class="work-item__caption">
+              <div>
+                <h3>Geometric</h3>
+                <p>by Ryan Cole</p>
+              </div>
+              <span class="work-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+            </figcaption>
+          </figure>
+          <figure class="work-item reveal" data-category="black-grey" data-lightbox tabindex="0" role="button" aria-label="View Blackwork tattoo by Ryan Cole" style="--d:0.16s">
+            <img src="blackworktattoo.webp" alt="Full back blackwork tattoo of a bold ornamental creature" loading="lazy" style="object-position: top;">
+            <figcaption class="work-item__caption">
+              <div>
+                <h3>Blackwork</h3>
+                <p>by Ryan Cole</p>
+              </div>
+              <span class="work-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+            </figcaption>
+          </figure>
+          <figure class="work-item reveal" data-category="color" data-lightbox tabindex="0" role="button" aria-label="View Portrait tattoo by Alex Carter" style="--d:0.00s">
+            <img src="portraittattoo.webp" alt="Color portrait tattoo of a young child surrounded by blue waves" loading="lazy" style="object-position: center;">
+            <figcaption class="work-item__caption">
+              <div>
+                <h3>Portrait</h3>
+                <p>by Alex Carter</p>
+              </div>
+              <span class="work-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+            </figcaption>
+          </figure>
+          <figure class="work-item reveal" data-category="fine-line" data-lightbox tabindex="0" role="button" aria-label="View Floral tattoo by Jamie Rivera" style="--d:0.08s">
+            <img src="floraltattoo.webp" alt="Fine line floral bouquet tied with a ribbon on the arm" loading="lazy" style="object-position: center;">
+            <figcaption class="work-item__caption">
+              <div>
+                <h3>Floral</h3>
+                <p>by Jamie Rivera</p>
+              </div>
+              <span class="work-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+            </figcaption>
+          </figure>
+          <figure class="work-item reveal" data-category="black-grey" data-lightbox tabindex="0" role="button" aria-label="View Japanese tattoo by Ryan Cole" style="--d:0.16s">
+            <img src="japanesetattoo.webp" alt="Japanese-style black and grey tattoo of a pagoda beneath a rising sun" loading="lazy" style="object-position: center;">
+            <figcaption class="work-item__caption">
+              <div>
+                <h3>Japanese</h3>
+                <p>by Ryan Cole</p>
+              </div>
+              <span class="work-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <!-- Gallery Masonry Grid -->
-    <section class="section" style="padding-bottom: var(--space-3xl);">
+    <section class="cta-band">
       <div class="container">
-        <div class="gallery-masonry">
-          <!-- Artist: Mira Vasquez - Neo-Traditional -->
-          <figure class="gallery-masonry-item fade-in" data-artist="Mira Vasquez" data-style="neo-traditional color">
-            <img src="img/tattoo-1.webp" alt="Vibrant neo-traditional floral tattoo with red, blue, and yellow flowers" width="400" height="500" loading="lazy">
-            <figcaption class="gallery-masonry-caption">
-              <strong>Floral Masterpiece</strong> - Neo-Traditional by Mira Vasquez
-            </figcaption>
-          </figure>
-
-          <figure class="gallery-masonry-item fade-in" data-artist="Mira Vasquez" data-style="neo-traditional color">
-            <img src="img/tattoo-5.webp" alt="Colorful phoenix tattoo with vibrant reds and oranges" width="400" height="300" loading="lazy">
-            <figcaption class="gallery-masonry-caption">
-              <strong>Phoenix Rising</strong> - Neo-Traditional by Mira Vasquez
-            </figcaption>
-          </figure>
-
-          <!-- Artist: Darius Kane - Blackwork -->
-          <figure class="gallery-masonry-item fade-in" data-artist="Darius Kane" data-style="blackwork">
-            <img src="img/tattoo-2.webp" alt="Intricate geometric blackwork tattoo on forearm" width="400" height="400" loading="lazy">
-            <figcaption class="gallery-masonry-caption">
-              <strong>Sacred Geometry</strong> - Blackwork by Darius Kane
-            </figcaption>
-          </figure>
-
-          <figure class="gallery-masonry-item fade-in" data-artist="Darius Kane" data-style="blackwork portrait">
-            <img src="img/tattoo-6.webp" alt="Detailed black and grey portrait tattoo" width="400" height="450" loading="lazy">
-            <figcaption class="gallery-masonry-caption">
-              <strong>Portrait Study</strong> - Blackwork by Darius Kane
-            </figcaption>
-          </figure>
-
-          <!-- Artist: Lena Chen - Fine Line -->
-          <figure class="gallery-masonry-item fade-in" data-artist="Lena Chen" data-style="fine-line">
-            <img src="img/tattoo-3.webp" alt="Delicate fine line tattoo on wrist with minimalist design" width="400" height="250" loading="lazy">
-            <figcaption class="gallery-masonry-caption">
-              <strong>Whispering Lines</strong> - Fine Line by Lena Chen
-            </figcaption>
-          </figure>
-
-          <figure class="gallery-masonry-item fade-in" data-artist="Lena Chen" data-style="fine-line">
-            <img src="img/gallery-1.webp" alt="Minimalist fine line tattoo with geometric patterns" width="400" height="350" loading="lazy">
-            <figcaption class="gallery-masonry-caption">
-              <strong>Geometric Minimalism</strong> - Fine Line by Lena Chen
-            </figcaption>
-          </figure>
-
-          <!-- Artist: Javier Morales - Traditional -->
-          <figure class="gallery-masonry-item fade-in" data-artist="Javier Morales" data-style="traditional">
-            <img src="img/tattoo-4.webp" alt="Bold traditional anchor tattoo with red and green colors" width="400" height="300" loading="lazy">
-            <figcaption class="gallery-masonry-caption">
-              <strong>Old School Anchor</strong> - Traditional by Javier Morales
-            </figcaption>
-          </figure>
-
-          <figure class="gallery-masonry-item fade-in" data-artist="Javier Morales" data-style="traditional">
-            <img src="img/gallery-2.webp" alt="Traditional eagle tattoo with bold outlines" width="400" height="400" loading="lazy">
-            <figcaption class="gallery-masonry-caption">
-              <strong>Freedom Eagle</strong> - Traditional by Javier Morales
-            </figcaption>
-          </figure>
-
-          <!-- Additional Gallery Images -->
-          <figure class="gallery-masonry-item fade-in" data-artist="Mira Vasquez" data-style="neo-traditional color">
-            <img src="img/gallery-3.webp" alt="Colorful dragon tattoo with vibrant scales" width="400" height="500" loading="lazy">
-            <figcaption class="gallery-masonry-caption">
-              <strong>Dragon's Breath</strong> - Neo-Traditional by Mira Vasquez
-            </figcaption>
-          </figure>
-
-          <figure class="gallery-masonry-item fade-in" data-artist="Darius Kane" data-style="blackwork">
-            <img src="img/gallery-4.webp" alt="Complex mandala blackwork tattoo" width="400" height="350" loading="lazy">
-            <figcaption class="gallery-masonry-caption">
-              <strong>Mandala Meditation</strong> - Blackwork by Darius Kane
-            </figcaption>
-          </figure>
-
-          <figure class="gallery-masonry-item fade-in" data-artist="Lena Chen" data-style="fine-line">
-            <img src="img/gallery-5.webp" alt="Fine line floral tattoo with delicate petals" width="400" height="450" loading="lazy">
-            <figcaption class="gallery-masonry-caption">
-              <strong>Petal Perfection</strong> - Fine Line by Lena Chen
-            </figcaption>
-          </figure>
-
-          <figure class="gallery-masonry-item fade-in" data-artist="Javier Morales" data-style="traditional">
-            <img src="img/gallery-6.webp" alt="Traditional rose tattoo with classic styling" width="400" height="300" loading="lazy">
-            <figcaption class="gallery-masonry-caption">
-              <strong>Classic Rose</strong> - Traditional by Javier Morales
-            </figcaption>
-          </figure>
-
-          <figure class="gallery-masonry-item fade-in" data-artist="Mira Vasquez" data-style="color portrait">
-            <img src="img/gallery-7.webp" alt="Color portrait tattoo of a loved one" width="400" height="500" loading="lazy">
-            <figcaption class="gallery-masonry-caption">
-              <strong>Loved One Portrait</strong> - Color Portrait by Mira Vasquez
-            </figcaption>
-          </figure>
-
-          <figure class="gallery-masonry-item fade-in" data-artist="Darius Kane" data-style="blackwork">
-            <img src="img/gallery-8.webp" alt="Blackwork sleeve tattoo with intricate patterns" width="400" height="600" loading="lazy">
-            <figcaption class="gallery-masonry-caption">
-              <strong>Patterned Sleeve</strong> - Blackwork by Darius Kane
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-      <div class="container">
-        <div class="cta-content">
-          <h2 class="cta-title">Inspired to Get Ink&eacute;d?</h2>
-          <p class="cta-description">
-            Our gallery showcases just a fraction of what we can create. Each tattoo is custom designed 
-            to match your unique vision and style. Ready to start your own tattoo journey?
-          </p>
-          <div class="cta-buttons">
-            <a href="index.html#booking" class="btn btn-primary">Book Consultation</a>
-            <a href="index.html" class="btn btn-secondary">Back to Home</a>
-          </div>
+        <span class="eyebrow reveal">Now booking</span>
+        <h2 class="reveal" style="--d:.08s">Ready to start your <em>next piece?</em></h2>
+        <p class="reveal" style="--d:.16s">Tell us your idea. We'll pair you with the right artist and set up a free consultation.</p>
+        <div class="cta-band__actions reveal" style="--d:.24s">
+          <a href="contact.html#book" class="btn">Book a Consultation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="tel:+15551234567" class="btn btn--ghost">Call (555) 123-4567</a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Tattoo viewer" aria-hidden="true">
+    <span class="lightbox__count"></span>
+    <button class="lightbox__btn lightbox__close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <button class="lightbox__btn lightbox__prev" type="button" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+    <button class="lightbox__btn lightbox__next" type="button" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+    <figure class="lightbox__figure">
+      <img src="" alt="">
+      <figcaption><h3></h3><p></p></figcaption>
+    </figure>
+  </div>
+
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3 class="footer-brand">Ink & Echo</h3>
-          <p class="footer-tagline">Tattoo Collective</p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="Black Rose Tattoo home">
+            <span class="logo__mark">Black <span>Rose</span></span>
+            <span class="logo__sub">Tattoo Studio</span>
+          </a>
+          <p>Custom tattoos designed around your story, in a private, appointment-first studio in the heart of Portland.</p>
+          <div class="socials">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5H16l.5-3h-3V8.6c0-.9.3-1.6 1.6-1.6h1.6V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.2H7.5v3H10V21h3.5z"/></svg></a>
+            <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 3c.3 2.2 1.6 3.7 3.9 3.9v3.1c-1.4.1-2.7-.3-3.9-1.1v6.2c0 3.6-2.8 5.9-5.9 5.9-3.4 0-5.9-2.6-5.9-5.8 0-3.6 3.1-6.3 6.9-5.7v3.2c-1.7-.4-3.6.6-3.6 2.5 0 1.5 1.2 2.6 2.6 2.6 1.6 0 2.6-1.2 2.6-2.9V3h3.3z"/></svg></a>
+          </div>
         </div>
-        
-        <div class="footer-section">
-          <h3>Quick Links</h3>
+        <div class="footer-col">
+          <h4>Explore</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#artists">Artists</a></li>
-            <li><a href="index.html#booking">Booking</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="artists.html">Artists</a></li>
+            <li><a href="contact.html#book">Book a Consult</a></li>
           </ul>
         </div>
-        
-        <div class="footer-section">
-          <h3>Services</h3>
+        <div class="footer-col">
+          <h4>Hours</h4>
           <ul>
-            <li><a href="index.html#styles">Tattoo Styles</a></li>
-            <li><a href="#">Piercings</a></li>
-            <li><a href="#">Cover-ups</a></li>
-            <li><a href="#">Consultations</a></li>
+            <li><span>Tue – Sat</span>11am – 7pm</li>
+            <li><span>Sun – Mon</span>Closed</li>
+            <li><span>Walk-ins</span>Welcome</li>
           </ul>
         </div>
-        
-        <div class="footer-section">
-          <h3>Connect</h3>
+        <div class="footer-col">
+          <h4>Visit</h4>
           <ul>
-            <li><a href="tel:+15035550123">(503) 555-0123</a></li>
-            <li><a href="mailto:info@inkandecho.com">info@inkandecho.com</a></li>
-            <li><a href="https://instagram.com/inkandechotattoo" target="_blank" rel="noopener">Instagram</a></li>
-            <li><a href="https://facebook.com/inkandechotattoo" target="_blank" rel="noopener">Facebook</a></li>
+            <li>123 Ink Street<br>Portland, OR 97201</li>
+            <li><a href="tel:+15551234567">(555) 123-4567</a></li>
+            <li><a href="mailto:hello@blackrosetattoo.com">hello@blackrosetattoo.com</a></li>
           </ul>
         </div>
       </div>
-      
+      <div class="footer-wordmark" aria-hidden="true">Black Rose</div>
+    </div>
+    <div class="container">
       <div class="footer-bottom">
-        <p>&copy; 2026 Ink & Echo Tattoo Collective. All rights reserved.</p>
-        <p>Ink & Echo is a fictional tattoo shop, built as a portfolio demonstration.</p>
+        <p>&copy; <span data-year>2026</span> Black Rose Tattoo. All rights reserved.</p>
+        <p>Demo website &mdash; not a real business</p>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="script.js?v=2" defer></script>
 </body>
 </html>
