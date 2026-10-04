@@ -1,488 +1,401 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ink & Echo Tattoo Collective | Custom Tattoos in Portland</title>
-  <meta name="description" content="Ink & Echo Tattoo Collective - Bold custom tattoos by Portland's finest artists. Traditional, neo-traditional, blackwork, and fine line specialists.">
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Black Rose Tattoo | Custom Tattoo Studio in Portland, OR</title>
+  <meta name="description" content="Black Rose Tattoo is a premium custom tattoo studio in Portland, Oregon. Fine line, realism, traditional, Japanese and more by award-winning resident artists.">
+  <meta name="theme-color" content="#0b0809">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Black Rose Tattoo">
+  <meta property="og:title" content="Black Rose Tattoo | Custom Tattoo Studio in Portland, OR">
+  <meta property="og:description" content="Black Rose Tattoo is a premium custom tattoo studio in Portland, Oregon. Fine line, realism, traditional, Japanese and more by award-winning resident artists.">
+  <meta property="og:image" content="hero.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="css/style.css">
-  
-  <!-- Concept banner inline styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=2">
+  <script>document.documentElement.classList.add('js');</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TattooParlor",
+    "name": "Black Rose Tattoo",
+    "image": "hero.webp",
+    "telephone": "+1-555-123-4567",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Ink Street",
+      "addressLocality": "Portland",
+      "addressRegion": "OR",
+      "postalCode": "97201",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "11:00",
+      "closes": "19:00"
+    }]
+  }
+  </script>
+  <!-- Self-contained concept banner; keep demo branding separate. -->
   <style>
-    .concept-banner {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: #050505;
-      border-bottom: 1px solid #2a2a2a;
-      padding: 0.5rem 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-      font-size: 0.875rem;
-    }
-    .concept-banner-text {
-      color: #a0a0a0;
-    }
-    .concept-banner-link {
-      color: #a0a0a0;
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
-      text-decoration: none;
-    }
-    .concept-banner-link:hover {
-      color: #8b5cf6;
-    }
-    .main-content {
-      padding-top: 60px;
-    }
+    html { scroll-padding-top: 48px; }
+    body { padding-top: 48px; }
+    .site-header { top: 48px; }
+    .skip-link:focus { top: calc(48px + var(--space-2)); }
+    .portfolio-concept { position: fixed; inset: 0 0 auto; z-index: 10000; height: 48px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 6px 16px; background: #15140f; color: #fff; font: 12px/1.4 system-ui, sans-serif; }
+    .portfolio-concept a { flex-shrink: 0; color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+    .portfolio-concept a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+    @media (max-width: 400px) { .portfolio-concept { padding-inline: 8px; gap: 8px; font-size: 11px; } }
   </style>
 </head>
 <body>
-  <!-- Concept Banner -->
-  <div class="concept-banner">
-    <span class="concept-banner-text">Concept site for a fictional business, designed by Next Door Web Development</span>
-    <a class="concept-banner-link" href="/">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M19 12H5M12 19l-7-7 7-7"/>
-      </svg>
-      Back to portfolio
-    </a>
-  </div>
+  <aside class="portfolio-concept" aria-label="Concept site notice">
+    <span>Concept site for a fictional business, designed by Next Door Web Development</span>
+    <a href="/">← Back to portfolio</a>
+  </aside>
 
-  <main class="main-content">
-    <!-- Hero Section -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="container">
-        <div class="hero-content fade-in">
-          <p class="text-accent text-lg mb-sm" style="font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;">
-            Custom Tattoos & Piercings
-          </p>
-          <h1 class="hero-title" id="hero-title">Ink & Echo Tattoo Collective</h1>
-          <p class="hero-tagline">Where art meets skin in Portland</p>
-          <p class="hero-description">
-            Ink & Echo is Portland's premier tattoo collective, featuring a diverse team of artists 
-            specializing in traditional, neo-traditional, blackwork, and fine line tattoos. 
-            From bold statements to delicate details, we bring your vision to life.
-          </p>
-          <div class="hero-actions">
-            <a href="#booking" class="btn btn-primary">Book a Consultation</a>
-            <a href="gallery.html" class="btn btn-secondary">View Gallery</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="Black Rose Tattoo home">
+        <span class="logo__mark">Black <span>Rose</span></span>
+        <span class="logo__sub">Tattoo Studio</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="artists.html">Artists</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="contact.html#book" class="btn btn--sm">Book Now</a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home <small>01</small></a></li>
+        <li><a href="gallery.html">Gallery <small>02</small></a></li>
+        <li><a href="artists.html">Artists <small>03</small></a></li>
+        <li><a href="contact.html">Contact <small>04</small></a></li>
+      </ul>
+      <div class="mobile-menu__footer">
+        <a href="contact.html#book" class="btn btn--block">Book a Consultation</a>
+        <p>123 Ink Street, Portland, OR &nbsp;·&nbsp; <a href="tel:+15551234567">(555) 123-4567</a></p>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero__media">
+        <picture>
+          <img src="hero.webp" alt="The Black Rose Tattoo storefront at dusk, with its hand-painted sign and glowing neon windows" width="1600" height="826" fetchpriority="high">
+        </picture>
+      </div>
+      <div class="container hero__content">
+        <div>
+          <span class="eyebrow">Portland, OR &mdash; Est. 2014</span>
+          <h1>
+            <span class="line"><span>Custom ink, crafted</span></span>
+            <span class="line"><span>to last a <em>lifetime.</em></span></span>
+          </h1>
+          <p class="hero__lede">We're a premium tattoo studio specializing in custom designs that tell your unique story, created one-on-one with artists who care about every line.</p>
+          <div class="hero__actions">
+            <a href="contact.html#book" class="btn">Book a Consult <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="gallery.html" class="btn btn--ghost">View Our Work</a>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Artists Section -->
-    <section class="section" aria-labelledby="artists-title">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" id="artists-title">Our Artists</h2>
-          <p class="section-subtitle">Meet the talented team behind Ink & Echo</p>
-        </div>
-        
-        <div class="artists-grid">
-          <!-- Artist 1 -->
-          <article class="artist-card fade-in">
-            <img src="img/artist-1.webp" alt="Artist working on a tattoo" class="artist-image" width="400" height="300" loading="lazy">
-            <div class="artist-info">
-              <h3 class="artist-name">Mira Vasquez</h3>
-              <p class="artist-specialty">Neo-Traditional & Color Specialist</p>
-              <p class="artist-bio">
-                Mira brings vibrant colors and bold lines to life with her signature neo-traditional style. 
-                Known for her floral designs and mythical creatures.
-              </p>
+        <div class="hero__aside">
+          <div class="rating">
+            <span class="rating__score">4.9</span>
+            <div>
+              <span class="rating__stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <small>from 320+ Google reviews</small>
             </div>
-          </article>
-
-          <!-- Artist 2 -->
-          <article class="artist-card fade-in">
-            <img src="img/artist-2.webp" alt="Artist drawing tattoo design" class="artist-image" width="400" height="300" loading="lazy">
-            <div class="artist-info">
-              <h3 class="artist-name">Darius Kane</h3>
-              <p class="artist-specialty">Blackwork & Geometric</p>
-              <p class="artist-bio">
-                Darius creates intricate blackwork pieces with geometric precision. 
-                His designs often feature sacred geometry and dotwork patterns.
-              </p>
-            </div>
-          </article>
-
-          <!-- Artist 3 -->
-          <article class="artist-card fade-in">
-            <img src="img/artist-3.webp" alt="Artist with client" class="artist-image" width="400" height="300" loading="lazy">
-            <div class="artist-info">
-              <h3 class="artist-name">Lena Chen</h3>
-              <p class="artist-specialty">Fine Line & Delicate Work</p>
-              <p class="artist-bio">
-                Lena specializes in delicate fine line tattoos with a focus on minimalism and elegance. 
-                Perfect for those seeking subtle, meaningful pieces.
-              </p>
-            </div>
-          </article>
-
-          <!-- Artist 4 -->
-          <article class="artist-card fade-in">
-            <img src="img/artist-4.webp" alt="Artist at work station" class="artist-image" width="400" height="300" loading="lazy">
-            <div class="artist-info">
-              <h3 class="artist-name">Javier Morales</h3>
-              <p class="artist-specialty">Traditional & Old School</p>
-              <p class="artist-bio">
-                Javier keeps the old school tradition alive with bold outlines and limited palette. 
-                His work pays homage to the classic American tattoo style.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured Work Gallery -->
-    <section class="section" aria-labelledby="featured-title">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" id="featured-title">Featured Work</h2>
-          <p class="section-subtitle">A glimpse of what we create at Ink & Echo</p>
-        </div>
-        
-        <div class="gallery-grid">
-          <figure class="gallery-item fade-in">
-            <img src="img/tattoo-1.webp" alt="Neo-traditional floral tattoo with vibrant colors" width="300" height="300" loading="lazy">
-            <div class="gallery-overlay">
-              <figcaption class="gallery-caption">Floral Sleeve by Mira</figcaption>
-            </div>
-          </figure>
-          
-          <figure class="gallery-item fade-in">
-            <img src="img/tattoo-2.webp" alt="Geometric blackwork tattoo on forearm" width="300" height="300" loading="lazy">
-            <div class="gallery-overlay">
-              <figcaption class="gallery-caption">Sacred Geometry by Darius</figcaption>
-            </div>
-          </figure>
-          
-          <figure class="gallery-item fade-in">
-            <img src="img/tattoo-3.webp" alt="Fine line minimalist tattoo on wrist" width="300" height="300" loading="lazy">
-            <div class="gallery-overlay">
-              <figcaption class="gallery-caption">Delicate Wrist by Lena</figcaption>
-            </div>
-          </figure>
-          
-          <figure class="gallery-item fade-in">
-            <img src="img/tattoo-4.webp" alt="Traditional anchor tattoo" width="300" height="300" loading="lazy">
-            <div class="gallery-overlay">
-              <figcaption class="gallery-caption">Old School Anchor by Javier</figcaption>
-            </div>
-          </figure>
-          
-          <figure class="gallery-item fade-in">
-            <img src="img/tattoo-5.webp" alt="Colorful phoenix tattoo" width="300" height="300" loading="lazy">
-            <div class="gallery-overlay">
-              <figcaption class="gallery-caption">Phoenix Rising by Mira</figcaption>
-            </div>
-          </figure>
-          
-          <figure class="gallery-item fade-in">
-            <img src="img/tattoo-6.webp" alt="Black and grey portrait tattoo" width="300" height="300" loading="lazy">
-            <div class="gallery-overlay">
-              <figcaption class="gallery-caption">Portrait Work by Darius</figcaption>
-            </div>
-          </figure>
-        </div>
-        
-        <div class="text-center mt-2xl">
-          <a href="gallery.html" class="btn btn-secondary">View Full Gallery</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tattoo Styles Section -->
-    <section class="section" style="background: linear-gradient(180deg, transparent 0%, rgba(139, 92, 246, 0.05) 50%, transparent 100%);" aria-labelledby="styles-title">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" id="styles-title">Tattoo Styles</h2>
-          <p class="section-subtitle">We specialize in these tattoo styles</p>
-        </div>
-        
-        <div class="styles-grid">
-          <article class="style-card fade-in">
-            <div class="style-icon">&#128394;</div>
-            <h3 class="style-name">Traditional</h3>
-            <p class="style-description">Bold outlines, limited palette, timeless American style tattoos</p>
-          </article>
-          
-          <article class="style-card fade-in">
-            <div class="style-icon">&#127996;</div>
-            <h3 class="style-name">Neo-Traditional</h3>
-            <p class="style-description">Traditional roots with modern color saturation and depth</p>
-          </article>
-          
-          <article class="style-card fade-in">
-            <div class="style-icon">&#128393;</div>
-            <h3 class="style-name">Blackwork</h3>
-            <p class="style-description">Bold black ink, geometric patterns, and intricate designs</p>
-          </article>
-          
-          <article class="style-card fade-in">
-            <div class="style-icon">&#128395;</div>
-            <h3 class="style-name">Fine Line</h3>
-            <p class="style-description">Delicate, precise lines for subtle and elegant tattoos</p>
-          </article>
-          
-          <article class="style-card fade-in">
-            <div class="style-icon">&#127995;</div>
-            <h3 class="style-name">Color Realism</h3>
-            <p class="style-description">Vibrant, lifelike tattoos with photorealistic detail</p>
-          </article>
-          
-          <article class="style-card fade-in">
-            <div class="style-icon">&#127987;</div>
-            <h3 class="style-name">Japanese</h3>
-            <p class="style-description">Traditional Irezumi with bold colors and mythical themes</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Booking Process Section -->
-    <section class="section" id="booking" aria-labelledby="booking-title">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" id="booking-title">Booking Process</h2>
-          <p class="section-subtitle">How to get your perfect tattoo at Ink & Echo</p>
-        </div>
-        
-        <div class="booking-steps">
-          <article class="booking-step fade-in">
-            <div class="step-number" aria-hidden="true">1</div>
-            <h3 class="step-title">Consultation</h3>
-            <p class="step-description">
-              Schedule a free consultation with one of our artists to discuss your ideas, placement, and design options.
-            </p>
-          </article>
-          
-          <article class="booking-step fade-in">
-            <div class="step-number" aria-hidden="true">2</div>
-            <h3 class="step-title">Design</h3>
-            <p class="step-description">
-              Work with your artist to create a custom design that brings your vision to life. We'll refine it until it's perfect.
-            </p>
-          </article>
-          
-          <article class="booking-step fade-in">
-            <div class="step-number" aria-hidden="true">3</div>
-            <h3 class="step-title">Schedule</h3>
-            <p class="step-description">
-              Book your tattoo session at a time that works for you. We accommodate walk-ins when possible, but appointments are recommended.
-            </p>
-          </article>
-          
-          <article class="booking-step fade-in">
-            <div class="step-number" aria-hidden="true">4</div>
-            <h3 class="step-title">Aftercare</h3>
-            <p class="step-description">
-              Receive comprehensive aftercare instructions to ensure your new tattoo heals beautifully. We're here to support you throughout the process.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="section" aria-labelledby="faq-title">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" id="faq-title">Frequently Asked Questions</h2>
-          <p class="section-subtitle">Everything you need to know about getting tattooed</p>
-        </div>
-        
-        <div class="faq-list">
-          <article class="faq-item fade-in">
-            <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
-              <span>How much do tattoos cost?</span>
-              <span class="faq-toggle" aria-hidden="true"></span>
-            </button>
-            <div class="faq-answer" id="faq-1">
-              <p>Tattoo pricing varies based on size, complexity, and the artist's hourly rate. Most tattoos range from $150-$500, with larger pieces priced accordingly. We provide quotes during your consultation.</p>
-            </div>
-          </article>
-          
-          <article class="faq-item fade-in">
-            <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
-              <span>Do tattoos hurt?</span>
-              <span class="faq-toggle" aria-hidden="true"></span>
-            </button>
-            <div class="faq-answer" id="faq-2">
-              <p>Pain levels vary from person to person and depend on the location. Most clients describe it as a discomfort rather than pain. We use high-quality equipment and techniques to minimize discomfort.</p>
-            </div>
-          </article>
-          
-          <article class="faq-item fade-in">
-            <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
-              <span>How should I prepare for my tattoo?</span>
-              <span class="faq-toggle" aria-hidden="true"></span>
-            </button>
-            <div class="faq-answer" id="faq-3">
-              <p>Get a good night's sleep, eat a meal before your appointment, stay hydrated, and avoid alcohol 24 hours before. Wear comfortable clothing that allows easy access to the tattoo area.</p>
-            </div>
-          </article>
-          
-          <article class="faq-item fade-in">
-            <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
-              <span>What's your aftercare process?</span>
-              <span class="faq-toggle" aria-hidden="true"></span>
-            </button>
-            <div class="faq-answer" id="faq-4">
-              <p>We provide detailed aftercare instructions and recommend washing with mild soap, applying healing ointment, and avoiding direct sunlight. We'll schedule a follow-up to check on your healing progress.</p>
-            </div>
-          </article>
-          
-          <article class="faq-item fade-in">
-            <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
-              <span>Can I get tattooed if I'm pregnant or nursing?</span>
-              <span class="faq-toggle" aria-hidden="true"></span>
-            </button>
-            <div class="faq-answer" id="faq-5">
-              <p>For safety reasons, we do not tattoo clients who are pregnant or nursing. We recommend waiting until after you've finished nursing to get tattooed.</p>
-            </div>
-          </article>
-          
-          <article class="faq-item fade-in">
-            <button class="faq-question" aria-expanded="false" aria-controls="faq-6">
-              <span>Do you do cover-ups?</span>
-              <span class="faq-toggle" aria-hidden="true"></span>
-            </button>
-            <div class="faq-answer" id="faq-6">
-              <p>Yes, our artists are experienced in cover-up work. During your consultation, we'll assess your existing tattoo and discuss design options that will effectively cover it while creating something you'll love.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Location & Hours Section -->
-    <section class="section" aria-labelledby="location-title">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" id="location-title">Visit Us</h2>
-          <p class="section-subtitle">Find us in the heart of Portland</p>
-        </div>
-        
-        <div class="location-section">
-          <article class="location-card fade-in">
-            <div class="map-placeholder">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-              <span class="ml-sm">Interactive Map Placeholder</span>
-            </div>
-            <h3 class="location-title">Ink & Echo Tattoo Collective</h3>
-            <address class="location-address">
-              1234 SE Division Street<br>
-              Portland, OR 97202<br>
-              United States
-            </address>
-            <div class="location-hours">
-              <h4 class="hours-title">Hours</h4>
-              <div class="hours-list">
-                <p><strong>Monday:</strong> Closed</p>
-                <p><strong>Tuesday-Saturday:</strong> 11:00 AM - 8:00 PM</p>
-                <p><strong>Sunday:</strong> 12:00 PM - 6:00 PM</p>
-              </div>
-            </div>
-          </article>
-          
-          <article class="location-card fade-in">
-            <h3 class="location-title">Contact Us</h3>
-            <div class="location-address">
-              <p><strong>Phone:</strong> (503) 555-0123</p>
-              <p><strong>Email:</strong> info@inkandecho.com</p>
-              <p><strong>Instagram:</strong> @inkandechotattoo</p>
-            </div>
-            <div class="location-hours">
-              <h4 class="hours-title">Walk-ins Welcome</h4>
-              <div class="hours-list">
-                <p>We accept walk-ins during business hours when artists are available. For guaranteed service, we recommend booking an appointment.</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-      <div class="container">
-        <div class="cta-content">
-          <h2 class="cta-title">Ready to Get Ink&eacute;d?</h2>
-          <p class="cta-description">
-            Whether you have a clear vision or need help developing your ideas, our talented artists 
-            are ready to create something amazing with you. Schedule your consultation today.
-          </p>
-          <div class="cta-buttons">
-            <a href="#booking" class="btn btn-primary">Book Consultation</a>
-            <a href="gallery.html" class="btn btn-secondary">View Gallery</a>
           </div>
+          <a href="#about" class="scroll-cue"><span class="scroll-cue__line"></span>Scroll</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <div class="marquee__group"><span>Fine Line</span><i aria-hidden="true">&#10022;</i><span>Traditional</span><i aria-hidden="true">&#10022;</i><span>Realism</span><i aria-hidden="true">&#10022;</i><span>Watercolor</span><i aria-hidden="true">&#10022;</i><span>Geometric</span><i aria-hidden="true">&#10022;</i><span>Blackwork</span><i aria-hidden="true">&#10022;</i><span>Portrait</span><i aria-hidden="true">&#10022;</i><span>Floral</span><i aria-hidden="true">&#10022;</i><span>Japanese</span><i aria-hidden="true">&#10022;</i></div>
+        <div class="marquee__group"><span>Fine Line</span><i aria-hidden="true">&#10022;</i><span>Traditional</span><i aria-hidden="true">&#10022;</i><span>Realism</span><i aria-hidden="true">&#10022;</i><span>Watercolor</span><i aria-hidden="true">&#10022;</i><span>Geometric</span><i aria-hidden="true">&#10022;</i><span>Blackwork</span><i aria-hidden="true">&#10022;</i><span>Portrait</span><i aria-hidden="true">&#10022;</i><span>Floral</span><i aria-hidden="true">&#10022;</i><span>Japanese</span><i aria-hidden="true">&#10022;</i></div>
+      </div>
+    </div>
+
+    <section class="section" id="about">
+      <div class="container split">
+        <div class="about__text">
+          <span class="eyebrow reveal">About the studio</span>
+          <h2 class="reveal" style="--d:.08s">Where art meets skin, <em>one story</em> at a time.</h2>
+          <p class="reveal" style="--d:.16s">Black Rose is a private, appointment-first studio in the heart of Portland. We don't do assembly-line tattoos. Every piece starts with a conversation and ends with original artwork made for one person: you.</p>
+          <p class="reveal" style="--d:.2s">Our resident artists each bring a distinct specialty, from whisper-thin fine line to bold traditional, so you're always matched with the right hands for your idea.</p>
+          <div class="signature reveal" style="--d:.24s">
+            <span class="signature__mark" aria-hidden="true">BR</span>
+            <p><strong>Licensed &amp; fully insured</strong>Single-use needles, hospital-grade sterilization, vegan inks.</p>
+          </div>
+        </div>
+        <div class="stats reveal" style="--d:.12s">
+          <div class="stat"><span class="stat__num"><span data-count="12">12</span><sup>+</sup></span><span class="stat__label">Years in Portland</span></div>
+          <div class="stat"><span class="stat__num"><span data-count="3">3</span></span><span class="stat__label">Resident artists</span></div>
+          <div class="stat"><span class="stat__num"><span data-count="8500">8500</span><sup>+</sup></span><span class="stat__label">Tattoos completed</span></div>
+          <div class="stat"><span class="stat__num"><span data-count="4.9">4.9</span><sup>&#9733;</sup></span><span class="stat__label">Average rating</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--surface">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal">Selected work</span>
+            <h2 class="reveal" style="--d:.08s">Fresh from <em>the chair</em></h2>
+          </div>
+          <a href="gallery.html" class="link-arrow reveal" style="--d:.16s">View full gallery <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <div class="work-grid">
+          <a href="gallery.html" class="work-item reveal" data-category="fine-line" style="--d:0.00s">
+            <img src="finelinetattoo.webp" alt="Fine line tattoo of flowers and butterflies trailing up the forearm" loading="lazy" style="object-position: center;">
+            <figcaption class="work-item__caption">
+              <div>
+                <h3>Fine Line</h3>
+                <p>by Jamie Rivera</p>
+              </div>
+              <span class="work-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+            </figcaption>
+          </a>
+          <a href="gallery.html" class="work-item reveal" data-category="black-grey" style="--d:0.08s">
+            <img src="realismtattoo.webp" alt="Black and grey realism tattoo of a lion on the forearm" loading="lazy" style="object-position: center;">
+            <figcaption class="work-item__caption">
+              <div>
+                <h3>Realism</h3>
+                <p>by Alex Carter</p>
+              </div>
+              <span class="work-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+            </figcaption>
+          </a>
+          <a href="gallery.html" class="work-item reveal" data-category="color" style="--d:0.16s">
+            <img src="traditionaltattoo.webp" alt="Neo-traditional tattoo of a woman framed by orange peonies on the upper arm" loading="lazy" style="object-position: center;">
+            <figcaption class="work-item__caption">
+              <div>
+                <h3>Traditional</h3>
+                <p>by Ryan Cole</p>
+              </div>
+              <span class="work-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+            </figcaption>
+          </a>
+          <a href="gallery.html" class="work-item reveal" data-category="black-grey" style="--d:0.24s">
+            <img src="japanesetattoo.webp" alt="Japanese-style black and grey tattoo of a pagoda beneath a rising sun" loading="lazy" style="object-position: center;">
+            <figcaption class="work-item__caption">
+              <div>
+                <h3>Japanese</h3>
+                <p>by Ryan Cole</p>
+              </div>
+              <span class="work-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+            </figcaption>
+          </a>
+          <a href="gallery.html" class="work-item reveal" data-category="color" style="--d:0.32s">
+            <img src="portraittattoo.webp" alt="Color portrait tattoo of a young child surrounded by blue waves" loading="lazy" style="object-position: center;">
+            <figcaption class="work-item__caption">
+              <div>
+                <h3>Portrait</h3>
+                <p>by Alex Carter</p>
+              </div>
+              <span class="work-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+            </figcaption>
+          </a>
+          <a href="gallery.html" class="work-item reveal" data-category="color" style="--d:0.40s">
+            <img src="watercolortattoo.webp" alt="Watercolor tattoo of a mushroom and crown with paint-splash color on the forearm" loading="lazy" style="object-position: center;">
+            <figcaption class="work-item__caption">
+              <div>
+                <h3>Watercolor</h3>
+                <p>by Jamie Rivera</p>
+              </div>
+              <span class="work-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+            </figcaption>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal">How it works</span>
+            <h2 class="reveal" style="--d:.08s">From idea to <em>healed</em></h2>
+          </div>
+          <p class="reveal" style="--d:.16s">No pressure, no guesswork. Here's exactly what to expect when you book with Black Rose.</p>
+        </div>
+        <div class="process">
+          <div class="step reveal" style="--d:0.0s"><span class="step__num">01</span><h3>Consult</h3><p>A free 20-minute chat, in studio or by video, to talk through your idea, placement, size and budget.</p></div>
+          <div class="step reveal" style="--d:0.1s"><span class="step__num">02</span><h3>Custom Design</h3><p>Your artist sketches an original design and refines it with you until it feels exactly right.</p></div>
+          <div class="step reveal" style="--d:0.2s"><span class="step__num">03</span><h3>Your Session</h3><p>Private, spotless, single-use everything. Relax, put on a playlist, and let us do the work.</p></div>
+          <div class="step reveal" style="--d:0.3s"><span class="step__num">04</span><h3>Aftercare</h3><p>You leave with a healing kit and a written guide, plus a free touch-up within 90 days.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--surface">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal">The artists</span>
+            <h2 class="reveal" style="--d:.08s">Meet the <em>hands</em> behind the ink</h2>
+          </div>
+          <a href="artists.html" class="link-arrow reveal" style="--d:.16s">All artists <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <div class="artist-grid">
+          <a href="artists.html#alex" class="artist-card reveal" style="--d:0.0s">
+            <div class="artist-card__media"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&h=400&fit=crop" alt="Portrait of artist Alex Carter" loading="lazy"></div>
+            <h3>Alex Carter <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h3>
+            <p>Realism &amp; Portrait</p>
+          </a>
+          <a href="artists.html#jamie" class="artist-card reveal" style="--d:0.1s">
+            <div class="artist-card__media"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&h=400&fit=crop" alt="Portrait of artist Jamie Rivera" loading="lazy"></div>
+            <h3>Jamie Rivera <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h3>
+            <p>Fine Line &amp; Floral</p>
+          </a>
+          <a href="artists.html#ryan" class="artist-card reveal" style="--d:0.2s">
+            <div class="artist-card__media"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400&h=400&fit=crop" alt="Portrait of artist Ryan Cole" loading="lazy"></div>
+            <h3>Ryan Cole <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h3>
+            <p>Traditional &amp; Japanese</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials">
+      <div class="container container--narrow">
+        <span class="quote-mark reveal" aria-hidden="true">&ldquo;</span>
+        <div class="testimonial-slider reveal" style="--d:.1s" aria-live="polite">
+          <figure class="testimonial">
+            <div class="testimonial__stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>I walked in with a rough idea and Jamie turned it into the most beautiful fine line piece. The studio is spotless and everyone made me feel at ease.</blockquote>
+            <figcaption><strong>Sarah M.</strong> &nbsp;&middot;&nbsp; Fine line forearm piece</figcaption>
+          </figure>
+          <figure class="testimonial">
+            <div class="testimonial__stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>Alex is a genuine artist. My lion portrait looks like a photograph. People stop me on the street to ask about it.</blockquote>
+            <figcaption><strong>Marcus T.</strong> &nbsp;&middot;&nbsp; Realism half-sleeve</figcaption>
+          </figure>
+          <figure class="testimonial">
+            <div class="testimonial__stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>Third tattoo with Ryan and I will not go anywhere else. Bold, clean, healed perfectly. Worth every minute in the chair.</blockquote>
+            <figcaption><strong>Dani K.</strong> &nbsp;&middot;&nbsp; Japanese back piece</figcaption>
+          </figure>
+        </div>
+        <div class="testimonial-dots" role="group" aria-label="Choose a review"></div>
+      </div>
+    </section>
+
+    <section class="section section--surface">
+      <div class="container split" style="align-items:start">
+        <div>
+          <span class="eyebrow reveal">Good to know</span>
+          <h2 class="reveal" style="--d:.08s">Frequently <em>asked</em></h2>
+          <p class="reveal" style="--d:.16s; margin-top: 1.5rem; max-width: 380px;">Can't find what you're looking for? Give us a call at <a href="tel:+15551234567" style="color: var(--bone); border-bottom: 1px solid var(--line-strong);">(555) 123-4567</a>. We're happy to help.</p>
+        </div>
+        <div class="faq reveal" style="--d:.12s">
+          <details open>
+            <summary>Do you take walk-ins?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <p class="faq__answer">Yes. Walk-ins are welcome Tuesday through Saturday, depending on artist availability. Small pieces and flash designs are best suited to walk-ins; larger custom work is by appointment.</p>
+          </details>
+          <details>
+            <summary>How much does a tattoo cost?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <p class="faq__answer">Our shop minimum is $100. Most custom pieces are priced by the hour (from $160/hr) or as a flat rate quoted at your consultation, so there are no surprises.</p>
+          </details>
+          <details>
+            <summary>Do I need a deposit?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <p class="faq__answer">A $100 deposit secures your appointment and goes directly toward the cost of your tattoo. It is refundable with 48 hours&rsquo; notice.</p>
+          </details>
+          <details>
+            <summary>How old do I need to be?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <p class="faq__answer">You must be 18 or older with a valid government-issued photo ID. No exceptions, even with parental consent.</p>
+          </details>
+          <details>
+            <summary>How do I take care of a new tattoo?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <p class="faq__answer">Keep it clean, moisturized and out of direct sun for two weeks. We send every client home with a detailed aftercare guide and are always a message away.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container">
+        <span class="eyebrow reveal">Now booking</span>
+        <h2 class="reveal" style="--d:.08s">Ready to start your <em>next piece?</em></h2>
+        <p class="reveal" style="--d:.16s">Tell us your idea. We'll pair you with the right artist and set up a free consultation.</p>
+        <div class="cta-band__actions reveal" style="--d:.24s">
+          <a href="contact.html#book" class="btn">Book a Consultation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="tel:+15551234567" class="btn btn--ghost">Call (555) 123-4567</a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3 class="footer-brand">Ink & Echo</h3>
-          <p class="footer-tagline">Tattoo Collective</p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="Black Rose Tattoo home">
+            <span class="logo__mark">Black <span>Rose</span></span>
+            <span class="logo__sub">Tattoo Studio</span>
+          </a>
+          <p>Custom tattoos designed around your story, in a private, appointment-first studio in the heart of Portland.</p>
+          <div class="socials">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5H16l.5-3h-3V8.6c0-.9.3-1.6 1.6-1.6h1.6V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.2H7.5v3H10V21h3.5z"/></svg></a>
+            <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 3c.3 2.2 1.6 3.7 3.9 3.9v3.1c-1.4.1-2.7-.3-3.9-1.1v6.2c0 3.6-2.8 5.9-5.9 5.9-3.4 0-5.9-2.6-5.9-5.8 0-3.6 3.1-6.3 6.9-5.7v3.2c-1.7-.4-3.6.6-3.6 2.5 0 1.5 1.2 2.6 2.6 2.6 1.6 0 2.6-1.2 2.6-2.9V3h3.3z"/></svg></a>
+          </div>
         </div>
-        
-        <div class="footer-section">
-          <h3>Quick Links</h3>
+        <div class="footer-col">
+          <h4>Explore</h4>
           <ul>
-            <li><a href="#artists">Artists</a></li>
-            <li><a href="#booking">Booking</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="#faq">FAQ</a></li>
+            <li><a href="artists.html">Artists</a></li>
+            <li><a href="contact.html#book">Book a Consult</a></li>
           </ul>
         </div>
-        
-        <div class="footer-section">
-          <h3>Services</h3>
+        <div class="footer-col">
+          <h4>Hours</h4>
           <ul>
-            <li><a href="#styles">Tattoo Styles</a></li>
-            <li><a href="#">Piercings</a></li>
-            <li><a href="#">Cover-ups</a></li>
-            <li><a href="#">Consultations</a></li>
+            <li><span>Tue – Sat</span>11am – 7pm</li>
+            <li><span>Sun – Mon</span>Closed</li>
+            <li><span>Walk-ins</span>Welcome</li>
           </ul>
         </div>
-        
-        <div class="footer-section">
-          <h3>Connect</h3>
+        <div class="footer-col">
+          <h4>Visit</h4>
           <ul>
-            <li><a href="tel:+15035550123">(503) 555-0123</a></li>
-            <li><a href="mailto:info@inkandecho.com">info@inkandecho.com</a></li>
-            <li><a href="https://instagram.com/inkandechotattoo" target="_blank" rel="noopener">Instagram</a></li>
-            <li><a href="https://facebook.com/inkandechotattoo" target="_blank" rel="noopener">Facebook</a></li>
+            <li>123 Ink Street<br>Portland, OR 97201</li>
+            <li><a href="tel:+15551234567">(555) 123-4567</a></li>
+            <li><a href="mailto:hello@blackrosetattoo.com">hello@blackrosetattoo.com</a></li>
           </ul>
         </div>
       </div>
-      
+      <div class="footer-wordmark" aria-hidden="true">Black Rose</div>
+    </div>
+    <div class="container">
       <div class="footer-bottom">
-        <p>&copy; 2026 Ink & Echo Tattoo Collective. All rights reserved.</p>
-        <p>Ink & Echo is a fictional tattoo shop, built as a portfolio demonstration.</p>
+        <p>&copy; <span data-year>2026</span> Black Rose Tattoo. All rights reserved.</p>
+        <p>Demo website &mdash; not a real business</p>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="script.js?v=2" defer></script>
 </body>
 </html>
