@@ -2,7 +2,7 @@
    Uses only variables from tokens.css.
 
    Contents:
-   1. Buttons            7. Services tiers
+   1. Buttons            7. Services plan
    2. Site header        8. Process steps
    3. Section header     9. About
    4. Browser frame     10. CTA band
@@ -438,62 +438,104 @@
   background: var(--surface);
 }
 
-/* ---------- 7. Services tiers ---------- */
+/* ---------- 7. Services plan ----------
+   One pricing card: price and payment terms on the left, what's
+   included on the right. Stacks to one column on phones. */
 
-.tiers {
+.plan {
   display: grid;
-  gap: var(--space-3);
-  padding: 0;
-  list-style: none;
-}
-
-@media (min-width: 900px) {
-  .tiers {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.tier {
-  position: relative;
-  display: grid;
-  grid-template-rows: auto auto 1fr auto;
-  gap: var(--space-2);
+  gap: var(--space-4);
   padding: var(--space-4) var(--space-3);
   background: var(--surface);
-  border: 1px solid var(--line);
+  border: 1px solid var(--accent);
   border-radius: var(--radius);
-}
-
-.tier--featured {
-  border-color: var(--accent);
   box-shadow: var(--shadow);
 }
 
-.tier__badge {
-  position: absolute;
-  top: calc(var(--space-2) * -0.75);
-  left: var(--space-3);
-  padding: 0.15rem 0.6rem;
-  border-radius: 999px;
-  background: var(--accent);
-  color: var(--ink);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 500;
-}
-
-@media (prefers-color-scheme: dark) {
-  .tier__badge {
-    color: var(--bg);
+@media (min-width: 900px) {
+  .plan {
+    grid-template-columns: 1fr 1.3fr;
+    column-gap: var(--space-5);
+    padding: var(--space-5) var(--space-4);
   }
 }
 
-.tier__name {
+.plan__pricing {
+  display: grid;
+  gap: var(--space-2);
+  align-content: start;
+  justify-items: start;
+}
+
+.plan__name {
   font-size: var(--step-2);
 }
 
-.tier__summary {
+.plan__price {
+  font-family: var(--font-display);
+  font-size: var(--step-3);
+  line-height: 1;
+}
+
+.plan__price span {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
   color: var(--muted);
+}
+
+.plan__terms {
+  display: grid;
+  gap: var(--space-1);
+  width: 100%;
+  padding: var(--space-2) 0 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.plan__monthly {
+  width: 100%;
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.plan__monthly strong {
+  color: var(--ink);
+}
+
+.plan__pricing .btn {
+  margin-top: var(--space-1);
+}
+
+.plan__details {
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+}
+
+.plan__heading {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.plan__addon {
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+}
+
+.plan__addon p {
+  color: var(--muted);
+}
+
+.plan__addon strong {
+  color: var(--ink);
 }
 
 .tier__list {
@@ -517,12 +559,6 @@
   margin-top: 0.55em;
   border-radius: 50%;
   background: var(--accent);
-}
-
-.tier__price {
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  color: var(--muted);
 }
 
 /* ---------- 8. Process steps ---------- */
